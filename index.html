@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Elec - Électricien Orléans | Installation & Dépannage 24/7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --rouge-principal: #ED1C24;
+            --rouge-hover: #C91318;
+            --noir: #0D3B3F;
+            --gris-fonce: #1A1A1A;
+            --gris-moyen: #737373;
+            --gris-clair: #F5F5F5;
+            --blanc: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--noir);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--blanc);
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #E5E5E5;
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--noir);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--rouge-principal);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--rouge-principal);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .btn-rdv-nav {
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--rouge-principal);
+        }
+
+        .btn-rdv-nav:hover {
+            background: var(--rouge-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 80px;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #FAFAFA 0%, #FFFFFF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(220, 38, 38, 0.03) 100%);
+            z-index: 0;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: fadeInLeft 0.8s ease;
+        }
+
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(220, 38, 38, 0.1);
+            color: var(--rouge-principal);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: var(--noir);
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--rouge-principal);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gris-moyen);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            padding: 1.1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--rouge-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.35);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--noir);
+            padding: 1.1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            border: 2px solid var(--noir);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--noir);
+            color: var(--blanc);
+        }
+
+        .hero-stats {
+            margin-top: 3rem;
+            display: flex;
+            gap: 3rem;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--rouge-principal);
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--gris-moyen);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 0.8s ease 0.2s backwards;
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .trust-badge {
+            background: var(--blanc);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+        }
+
+        .rating-display {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            color: #FCD34D;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .rating-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--noir);
+        }
+
+        .rating-text {
+            color: var(--gris-moyen);
+            font-size: 0.95rem;
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .cert-item {
+            background: var(--gris-clair);
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--noir);
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 6rem 2rem;
+            background: var(--blanc);
+        }
+
+        .section-header {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .section-label {
+            color: var(--rouge-principal);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--noir);
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .section-description {
+            font-size: 1.15rem;
+            color: var(--gris-moyen);
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--blanc);
+            border: 2px solid #E5E5E5;
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--rouge-principal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .service-card:hover {
+            border-color: var(--rouge-principal);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(220, 38, 38, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--rouge-principal);
+            transform: scale(1.1);
+        }
+
+        .service-card:hover .service-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        .service-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--noir);
+        }
+
+        .service-description {
+            color: var(--gris-moyen);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--gris-moyen);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--rouge-principal);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* ZONE SECTION */
+        .zone-section {
+            padding: 5rem 2rem;
+            background: var(--gris-fonce);
+            color: var(--blanc);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zone-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(220, 38, 38, 0.1) 100%);
+        }
+
+        .zone-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .zone-content h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .zone-content p {
+            color: #D4D4D4;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .zone-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .zone-list li {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--rouge-principal);
+            font-weight: 500;
+        }
+
+        /* AVIS SECTION */
+        .avis-section {
+            padding: 6rem 2rem;
+            background: var(--gris-clair);
+        }
+
+        .avis-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .avis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .avis-card {
+            background: var(--blanc);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .avis-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* RÉALISATIONS */
+        .realisations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .realisation-card {
+            background: var(--blanc);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .realisation-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .realisation-image {
+            position: relative;
+            height: 240px;
+            background: linear-gradient(135deg, var(--gris-clair) 0%, #E8E8E8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .realisation-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Carrousel */
+        .realisation-carousel {
+            position: relative;
+            height: 240px;
+            background: linear-gradient(135deg, var(--gris-clair) 0%, #E8E8E8 100%);
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: var(--blanc);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background: var(--rouge-principal);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-btn.prev {
+            left: 10px;
+        }
+
+        .carousel-btn.next {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: var(--rouge-principal);
+            transform: scale(1.2);
+        }
+
+        .dot:hover {
+            background: var(--blanc);
+        }
+
+        .image-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(237, 28, 36, 0.05) 0%, rgba(13, 59, 63, 0.05) 100%);
+            transition: all 0.4s;
+        }
+
+        .realisation-card:hover .image-placeholder {
+            transform: scale(1.05);
+        }
+
+        .realisation-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .realisation-content {
+            padding: 2rem;
+        }
+
+        .realisation-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--noir);
+        }
+
+        .realisation-description {
+            color: var(--gris-moyen);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .realisation-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .spec-item {
+            background: var(--gris-clair);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--noir);
+        }
+
+        .google-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            color: var(--gris-moyen);
+            font-size: 0.85rem;
+        }
+
+        /* RÉSERVATION MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--blanc);
+            border-radius: 16px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-header {
+            background: var(--gris-fonce);
+            color: var(--blanc);
+            padding: 2rem;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .modal-header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-header p {
+            color: #D4D4D4;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--blanc);
+            font-size: 2rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--noir);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #E5E5E5;
+            border-radius: 8px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--rouge-principal);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+
+        .time-slot {
+            padding: 1rem;
+            border: 2px solid #E5E5E5;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--blanc);
+        }
+
+        .time-slot:hover {
+            border-color: var(--rouge-principal);
+            background: rgba(220, 38, 38, 0.05);
+        }
+
+        .time-slot.selected {
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            border-color: var(--rouge-principal);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            padding: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background: var(--rouge-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        /* CHATBOT */
+        .chatbot {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1500;
+        }
+
+        .chatbot-trigger {
+            width: 60px;
+            height: 60px;
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            border-radius: 50%;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(220, 38, 38, 0.4);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-trigger:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.5);
+        }
+
+        .chatbot-window {
+            display: none;
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 380px;
+            height: 500px;
+            background: var(--blanc);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            flex-direction: column;
+            overflow: hidden;
+            animation: slideUp 0.3s;
+        }
+
+        .chatbot-window.active {
+            display: flex;
+        }
+
+        .chatbot-mode-selector {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mode-btn {
+            background: var(--blanc);
+            border: 2px solid #E5E5E5;
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .mode-btn:hover {
+            border-color: var(--rouge-principal);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .diagnostic-btn {
+            background: linear-gradient(135deg, rgba(237, 28, 36, 0.05) 0%, rgba(237, 28, 36, 0.1) 100%);
+            border-color: var(--rouge-principal);
+        }
+
+        .diagnostic-btn:hover {
+            background: linear-gradient(135deg, rgba(237, 28, 36, 0.1) 0%, rgba(237, 28, 36, 0.15) 100%);
+        }
+
+        .mode-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .mode-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--noir);
+            margin-bottom: 0.3rem;
+        }
+
+        .mode-desc {
+            font-size: 0.9rem;
+            color: var(--gris-moyen);
+        }
+
+        .chat-input-container {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #E5E5E5;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chat-input-container input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #E5E5E5;
+            border-radius: 8px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .chat-input-container input:focus {
+            outline: none;
+            border-color: var(--rouge-principal);
+        }
+
+        .chat-input-container button {
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .chat-input-container button:hover {
+            background: var(--rouge-hover);
+        }
+
+        .back-btn {
+            background: transparent !important;
+            color: var(--noir) !important;
+            border: 1px solid var(--noir) !important;
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .back-btn:hover {
+            background: var(--noir) !important;
+            color: var(--blanc) !important;
+        }
+
+        .chatbot-header {
+            background: var(--gris-fonce);
+            color: var(--blanc);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        .close-chat {
+            background: none;
+            border: none;
+            color: var(--blanc);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .close-chat:hover {
+            transform: rotate(90deg);
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .chat-message {
+            padding: 1rem;
+            border-radius: 12px;
+            max-width: 80%;
+            animation: messageSlide 0.3s;
+        }
+
+        @keyframes messageSlide {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chat-message.bot {
+            background: var(--gris-clair);
+            color: var(--noir);
+            align-self: flex-start;
+        }
+
+        .chat-message.user {
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            align-self: flex-end;
+        }
+
+        .quick-questions {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #E5E5E5;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .quick-btn {
+            background: var(--gris-clair);
+            border: 1px solid #E5E5E5;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .quick-btn:hover {
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            border-color: var(--rouge-principal);
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 6rem 2rem;
+            background: var(--blanc);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(220, 38, 38, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .info-content h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--noir);
+        }
+
+        .info-content p {
+            color: var(--gris-moyen);
+        }
+
+        .info-content a {
+            color: var(--rouge-principal);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* IA DIAGNOSTIC HIGHLIGHT */
+        .ia-diagnostic-highlight {
+            background: linear-gradient(135deg, rgba(237, 28, 36, 0.08) 0%, rgba(237, 28, 36, 0.03) 100%);
+            border: 3px solid var(--rouge-principal);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(237, 28, 36, 0.15);
+        }
+
+        .ia-diagnostic-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(237, 28, 36, 0.1) 0%, transparent 70%);
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+
+        .ia-icon-big {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .ia-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--noir);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ia-description {
+            font-size: 1.15rem;
+            color: var(--gris-moyen);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ia-description strong {
+            color: var(--rouge-principal);
+            font-weight: 700;
+        }
+
+        .btn-ia-diagnostic {
+            background: var(--rouge-principal);
+            color: var(--blanc);
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(237, 28, 36, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-ia-diagnostic:hover {
+            background: var(--rouge-hover);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(237, 28, 36, 0.4);
+        }
+
+        .btn-ia-icon {
+            font-size: 1.5rem;
+        }
+
+        .btn-ia-arrow {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .btn-ia-diagnostic:hover .btn-ia-arrow {
+            transform: translateX(5px);
+        }
+
+        .ia-note {
+            margin-top: 1.5rem;
+            color: var(--gris-moyen);
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--gris-fonce);
+            color: var(--blanc);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .footer-text {
+            color: #A3A3A3;
+            margin-bottom: 2rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            color: #A3A3A3;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-container,
+            .zone-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chatbot-window {
+                width: 90vw;
+                right: 5vw;
+            }
+
+            .zone-list {
+                grid-template-columns: 1fr;
+            }
+
+            .ia-diagnostic-highlight {
+                padding: 2rem 1.5rem;
+            }
+
+            .ia-icon-big {
+                font-size: 3rem;
+            }
+
+            .ia-title {
+                font-size: 1.5rem;
+            }
+
+            .ia-description {
+                font-size: 1rem;
+            }
+
+            .btn-ia-diagnostic {
+                padding: 1.2rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="LOGO_start_elec.jpg" alt="Start Elec - Électricien Orléans">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#realisations">Réalisations</a></li>
+                <li><a href="#zone">Zone d'intervention</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn-rdv-nav" onclick="openModal(); return false;">Réserver un appel</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="accueil">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">⚡ START ELEC • ORLÉANS</span>
+                <h1>Votre électricien à <span class="highlight">Orléans</span></h1>
+                <p>Installation, rénovation et dépannage électrique pour particuliers et professionnels (boutiques, bureaux, entrepôts). Intervention rapide dans un rayon de 25km autour d'Orléans.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn-primary" onclick="openModal(); return false;" style="font-size: 1.2rem; padding: 1.3rem 3rem;">
+                        📅 Réserver un appel gratuit
+                        <span>→</span>
+                    </a>
+                </div>
+                <div style="margin-top: 1.5rem; text-align: center;">
+                    <p style="color: var(--gris-moyen); font-size: 0.95rem;">
+                        Ou appelez directement : <a href="tel:0660193521" style="color: var(--noir); text-decoration: none; font-weight: 500;">06 60 19 35 21</a>
+                    </p>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15 ans</span>
+                        <span class="stat-label">D'expérience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Rapide</span>
+                        <span class="stat-label">Intervention réactive</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25km</span>
+                        <span class="stat-label">Autour d'Orléans</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="certifications" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="cert-item" style="background: var(--blanc); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: var(--noir); box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+                        Normes NF C 15-100
+                    </div>
+                    <div class="cert-item" style="background: var(--blanc); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: var(--noir); box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛡️</div>
+                        Assuré RC Pro
+                    </div>
+                    <div class="cert-item" style="background: var(--blanc); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: var(--noir); box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏢</div>
+                        Particuliers & Pros
+                    </div>
+                    <div class="cert-item" style="background: var(--blanc); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: var(--noir); box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">✓</div>
+                        Travail garanti
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <p class="section-label">NOS EXPERTISES</p>
+            <h2 class="section-title">Des services complets pour tous vos besoins</h2>
+            <p class="section-description">Du diagnostic à l'installation, nous accompagnons vos projets électriques avec professionnalisme et réactivité.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3 class="service-title">Installation électrique</h3>
+                <p class="service-description">Conception et mise en place de votre installation électrique complète pour constructions neuves et extensions.</p>
+                <ul class="service-features">
+                    <li>Tableaux électriques</li>
+                    <li>Câblage complet</li>
+                    <li>Éclairage intérieur/extérieur</li>
+                    <li>Prises et interrupteurs</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3 class="service-title">Rénovation & Mise aux normes</h3>
+                <p class="service-description">Modernisation de vos installations anciennes selon les normes NF C 15-100 en vigueur.</p>
+                <ul class="service-features">
+                    <li>Diagnostic électrique</li>
+                    <li>Remplacement tableau</li>
+                    <li>Mise à la terre</li>
+                    <li>Sécurisation installation</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔌</div>
+                <h3 class="service-title">Dépannage électrique</h3>
+                <p class="service-description">Intervention rapide en cas de panne électrique, disjonction ou problème sur votre installation.</p>
+                <ul class="service-features">
+                    <li>Diagnostic de panne</li>
+                    <li>Réparation sur place</li>
+                    <li>Recherche de défauts</li>
+                    <li>Devis gratuit</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3 class="service-title">Électricité tertiaire</h3>
+                <p class="service-description">Solutions électriques pour professionnels : boutiques, bureaux, entrepôts et locaux commerciaux.</p>
+                <ul class="service-features">
+                    <li>Éclairage commercial</li>
+                    <li>Câblage bureaux</li>
+                    <li>Tableaux professionnels</li>
+                    <li>Normes ERP si besoin</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚨</div>
+                <h3 class="service-title">Alarme incendie</h3>
+                <p class="service-description">Installation de systèmes de détection et alarme incendie pour sécuriser vos locaux.</p>
+                <ul class="service-features">
+                    <li>Détecteurs de fumée</li>
+                    <li>Alarmes type 4</li>
+                    <li>Mise en conformité</li>
+                    <li>Maintenance préventive</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📞</div>
+                <h3 class="service-title">Interphonie</h3>
+                <p class="service-description">Pose et installation de systèmes d'interphone audio et vidéo pour sécuriser vos accès.</p>
+                <ul class="service-features">
+                    <li>Interphone audio/vidéo</li>
+                    <li>Visiophone connecté</li>
+                    <li>Contrôle d'accès</li>
+                    <li>Portier électrique</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ZONE INTERVENTION -->
+    <section class="zone-section" id="zone">
+        <div class="zone-container">
+            <div class="zone-content">
+                <h2>Intervention rapide sur Orléans et ses environs</h2>
+                <p>Nous intervenons dans un rayon de 25 kilomètres autour d'Orléans pour vous garantir une intervention rapide et efficace, que ce soit pour une urgence ou un projet planifié.</p>
+                <a href="#" class="btn-primary" onclick="openModal(); return false;">Vérifier votre éligibilité →</a>
+            </div>
+            <div>
+                <ul class="zone-list">
+                    <li>📍 Orléans Centre</li>
+                    <li>📍 Saint-Jean-de-Braye</li>
+                    <li>📍 Olivet</li>
+                    <li>📍 Fleury-les-Aubrais</li>
+                    <li>📍 Saint-Jean-de-la-Ruelle</li>
+                    <li>📍 Saran</li>
+                    <li>📍 Semoy</li>
+                    <li>📍 La Chapelle-Saint-Mesmin</li>
+                    <li>📍 Ingré</li>
+                    <li>📍 Chécy</li>
+                    <li>📍 + 25km autour d'Orléans</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- RÉALISATIONS SECTION -->
+    <section class="avis-section" id="realisations">
+        <div class="avis-container">
+            <div class="section-header">
+                <p class="section-label">NOS RÉALISATIONS</p>
+                <h2 class="section-title">Découvrez nos derniers projets</h2>
+                <p class="section-description">Chaque installation reflète notre engagement pour un travail soigné, aux normes et durable.</p>
+            </div>
+            <div class="realisations-grid">
+                <!-- Photo avant/après 1 -->
+                <div class="realisation-card">
+                    <div class="realisation-image">
+                        <img src="avant_apres_1.png" alt="Remise aux normes tableau électrique">
+                        <div class="realisation-badge">Rénovation</div>
+                    </div>
+                    <div class="realisation-content">
+                        <h3 class="realisation-title">Remise aux normes de tableau électrique</h3>
+                        <p class="realisation-description">Rénovation complète et mise en conformité NF C 15-100. Remplacement du tableau vétuste par une installation moderne et sécurisée.</p>
+                    </div>
+                </div>
+
+                <!-- Photo avant/après 2 -->
+                <div class="realisation-card">
+                    <div class="realisation-image">
+                        <img src="avant_apres_2.png" alt="Remise aux normes tableau électrique">
+                        <div class="realisation-badge">Rénovation</div>
+                    </div>
+                    <div class="realisation-content">
+                        <h3 class="realisation-title">Remise aux normes de tableau électrique</h3>
+                        <p class="realisation-description">Modernisation d'une installation ancienne avec nouveau tableau et câblage aux normes. Travail soigné et sécurisé.</p>
+                    </div>
+                </div>
+
+                <!-- Photo avant/après 3 -->
+                <div class="realisation-card">
+                    <div class="realisation-image">
+                        <img src="avant_apres_3.png" alt="Remise aux normes tableau électrique">
+                        <div class="realisation-badge">Rénovation</div>
+                    </div>
+                    <div class="realisation-content">
+                        <h3 class="realisation-title">Remise aux normes de tableau électrique</h3>
+                        <p class="realisation-description">Remplacement complet du tableau électrique et mise en sécurité de l'installation. Protection optimale pour votre logement.</p>
+                    </div>
+                </div>
+
+                <!-- Carrousel VMC (2 photos) -->
+                <div class="realisation-card">
+                    <div class="realisation-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="chantier_4.jpg" alt="Installation VMC combles">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="chantier_5.jpg" alt="Installation VMC combles">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide(this, -1)">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide(this, 1)">›</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                            <span class="dot" onclick="goToSlide(this, 1)"></span>
+                        </div>
+                        <div class="realisation-badge">Installation</div>
+                    </div>
+                    <div class="realisation-content">
+                        <h3 class="realisation-title">Installation VMC et câblage combles</h3>
+                        <p class="realisation-description">Pose d'un système de ventilation mécanique contrôlée dans les combles avec raccordements électriques conformes et passage de câbles.</p>
+                    </div>
+                </div>
+
+                <!-- Carrousel Câblage (3 photos) -->
+                <div class="realisation-card">
+                    <div class="realisation-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="chantier_1.jpg" alt="Câblage électrique en cours">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="chantier_2.jpg" alt="Installation électrique chantier">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="chantier_3.jpg" alt="Préparation installation électrique">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide(this, -1)">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide(this, 1)">›</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                            <span class="dot" onclick="goToSlide(this, 1)"></span>
+                            <span class="dot" onclick="goToSlide(this, 2)"></span>
+                        </div>
+                        <div class="realisation-badge">Installation</div>
+                    </div>
+                    <div class="realisation-content">
+                        <h3 class="realisation-title">Câblage électrique en construction</h3>
+                        <p class="realisation-description">Tirage de câbles et préparation des circuits électriques pour construction neuve. Organisation méthodique et passages de gaines soignés.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--gris-moyen); font-size: 1.1rem; margin-bottom: 1.5rem;">Vous avez un projet similaire ? Parlons-en !</p>
+                <a href="#" class="btn-primary" onclick="openModal(); return false;">Réserver un appel gratuit →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <!-- Bloc IA Diagnostic mis en avant -->
+            <div style="grid-column: 1 / -1; margin-bottom: 3rem;">
+                <div class="ia-diagnostic-highlight">
+                    <div class="ia-icon-big">🤖</div>
+                    <h3 class="ia-title">Dépannage gratuit par IA - Essayez d'abord !</h3>
+                    <p class="ia-description">Notre assistant intelligent peut résoudre de nombreuses pannes à distance, <strong>gratuitement et immédiatement</strong> ! Avant de m'appeler, tentez le diagnostic en ligne - vous gagnerez peut-être du temps.</p>
+                    <button class="btn-ia-diagnostic" onclick="openDiagnosticIA()">
+                        <span class="btn-ia-icon">🔧</span>
+                        <span class="btn-ia-text">Lancer le diagnostic intelligent</span>
+                        <span class="btn-ia-arrow">→</span>
+                    </button>
+                    <p class="ia-note">✓ Gratuit • ✓ Immédiat • ✓ Sécurisé • ✓ Sans engagement</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-header" style="text-align: left; margin-bottom: 3rem;">
+                    <p class="section-label">CONTACTEZ-NOUS</p>
+                    <h2 class="section-title">Prêt à démarrer votre projet ?</h2>
+                    <p class="section-description">Choisissez le mode de contact qui vous convient le mieux.</p>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:0660193521">06 60 19 35 21</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p><a href="/cdn-cgi/l/email-protection#c5b6b1a4b7b1a0a9a0a6f1f085a2a8a4aca9eba6aaa8"><span class="__cf_email__" data-cfemail="8efdfaeffcfaebe2ebedbabbcee9e3efe7e2a0ede1e3">[email&#160;protected]</span></a></p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Réponse sous 24h</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Adresse</h3>
+                            <p>Rue Maurice Berger</p>
+                            <p>45000 Orléans</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="background: var(--gris-clair); padding: 3rem; border-radius: 12px;">
+                <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 1.5rem;">Horaires d'ouverture</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="display: flex; justify-content: space-between; padding: 1rem; background: var(--blanc); border-radius: 8px;">
+                        <span style="font-weight: 600;">Lundi - Vendredi</span>
+                        <span style="color: var(--rouge-principal); font-weight: 600;">8h00 - 18h00</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 1rem; background: var(--blanc); border-radius: 8px;">
+                        <span style="font-weight: 600;">Samedi - Dimanche</span>
+                        <span style="color: var(--gris-moyen);">Fermé</span>
+                    </div>
+                    <div style="padding: 1rem; background: var(--gris-clair); border-radius: 8px; border-left: 4px solid var(--rouge-principal);">
+                        <p style="margin: 0; color: var(--noir); font-size: 0.95rem;">💡 <strong>Dépannage urgent ?</strong> Appelez-moi, je fais mon possible pour intervenir rapidement selon mes disponibilités.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="LOGO_start_elec.jpg" alt="Start Elec" style="height: 60px; margin-bottom: 1rem;">
+            </div>
+            <p class="footer-text">Votre expert électricité de confiance à Orléans et ses environs</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Start Elec. Tous droits réservés. | Mentions légales | Politique de confidentialité</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL RESERVATION -->
+    <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal" onclick="closeModal()">×</button>
+                <h2>Réservez votre appel</h2>
+                <p>Choisissez un créneau qui vous convient, je vous rappellerai</p>
+            </div>
+            <div class="modal-body">
+                <form id="reservationForm" onsubmit="submitReservation(event)">
+                    <div class="form-group">
+                        <label>Votre nom complet *</label>
+                        <input type="text" required placeholder="Jean Dupont">
+                    </div>
+                    <div class="form-group">
+                        <label>Téléphone *</label>
+                        <input type="tel" required placeholder="06 12 34 56 78">
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" required placeholder="jean.dupont@email.fr">
+                    </div>
+                    <div class="form-group">
+                        <label>Type de projet *</label>
+                        <select required>
+                            <option value="">Sélectionnez...</option>
+                            <option>Installation complète</option>
+                            <option>Rénovation / Mise aux normes</option>
+                            <option>Dépannage</option>
+                            <option>Domotique</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Est-ce urgent ? *</label>
+                        <select required>
+                            <option value="">Sélectionnez...</option>
+                            <option>Oui - Intervention sous 24h</option>
+                            <option>Non - Projet planifié</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Choisissez votre créneau préféré (18h-19h30) *</label>
+                        <div class="time-slots" id="timeSlots">
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Lun 18h-18h30</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Lun 18h30-19h</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Lun 19h-19h30</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Mar 18h-18h30</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Mar 18h30-19h</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Mar 19h-19h30</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Mer 18h-18h30</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Mer 18h30-19h</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Mer 19h-19h30</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Jeu 18h-18h30</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Jeu 18h30-19h</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Jeu 19h-19h30</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Ven 18h-18h30</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Ven 18h30-19h</div>
+                            <div class="time-slot" onclick="selectTimeSlot(this)">Ven 19h-19h30</div>
+                        </div>
+                        <p style="margin-top: 1rem; color: var(--gris-moyen); font-size: 0.9rem;">
+                            💡 <strong>Pas disponible sur ces créneaux ?</strong> Envoyez-moi un email à <a href="/cdn-cgi/l/email-protection#bfcccbdecdcbdad3dadc8b8affd8d2ded6d391dcd0d2" style="color: var(--rouge-principal);"><span class="__cf_email__" data-cfemail="b2c1c6d3c0c6d7ded7d18687f2d5dfd3dbde9cd1dddf">[email&#160;protected]</span></a> et nous trouverons un autre moment.
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <label>Description rapide de votre projet</label>
+                        <textarea placeholder="Décrivez brièvement vos besoins..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Confirmer ma réservation</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHATBOT AMÉLIORÉ -->
+    <div class="chatbot">
+        <button class="chatbot-trigger" onclick="toggleChat()">💬</button>
+        <div class="chatbot-window" id="chatWindow">
+            <div class="chatbot-header">
+                <h3>Assistant Start Elec</h3>
+                <button class="close-chat" onclick="toggleChat()">×</button>
+            </div>
+            
+            <!-- Sélection du mode -->
+            <div class="chatbot-mode-selector" id="modeSelector">
+                <button class="mode-btn" onclick="selectMode('general')">
+                    <span class="mode-icon">💬</span>
+                    <span class="mode-title">Questions générales</span>
+                    <span class="mode-desc">Horaires, tarifs, services...</span>
+                </button>
+                <button class="mode-btn diagnostic-btn" onclick="selectMode('diagnostic')">
+                    <span class="mode-icon">🔧</span>
+                    <span class="mode-title">Dépannage IA en ligne</span>
+                    <span class="mode-desc">Résolvez votre panne étape par étape</span>
+                </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatMessages" style="display: none;">
+                <div class="chat-message bot">
+                    Bonjour ! 👋 Je suis l'assistant virtuel de Start Elec. Comment puis-je vous aider ?
+                </div>
+            </div>
+
+            <div class="quick-questions" id="quickButtons" style="display: none;">
+                <button class="quick-btn" onclick="askQuestion('Quels sont vos horaires ?')">Horaires ?</button>
+                <button class="quick-btn" onclick="askQuestion('Faites-vous les urgences ?')">Urgences ?</button>
+                <button class="quick-btn" onclick="askQuestion('Zone d\'intervention ?')">Zone ?</button>
+                <button class="quick-btn" onclick="askQuestion('Tarifs ?')">Tarifs ?</button>
+                <button class="back-btn" onclick="backToMenu()">← Retour menu</button>
+            </div>
+
+            <div class="chat-input-container" id="chatInput" style="display: none;">
+                <input type="text" id="userInput" placeholder="Posez votre question..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">Envoyer</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    let currentMode = null;
+    let diagnosticContext = { category: null, step: 0, waitingFor: null, actionSuggested: null, userResponses: [] };
+    let securityWarningShown = false;
+
+    function openModal() {
+        document.getElementById('reservationModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        document.getElementById('reservationModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+    function selectTimeSlot(element) {
+        document.querySelectorAll('.time-slot').forEach(slot => slot.classList.remove('selected'));
+        element.classList.add('selected');
+    }
+    function submitReservation(e) {
+        e.preventDefault();
+        const selectedSlot = document.querySelector('.time-slot.selected');
+        if (!selectedSlot) { alert('Veuillez sélectionner un créneau horaire'); return; }
+        const form = e.target;
+        const data = {
+            nom: form.querySelector('input[type="text"]').value,
+            telephone: form.querySelector('input[type="tel"]').value,
+            email: form.querySelector('input[type="email"]').value,
+            typeProjet: form.querySelectorAll('select')[0].value,
+            urgence: form.querySelectorAll('select')[1].value,
+            creneauPreference: selectedSlot.textContent,
+            description: form.querySelector('textarea').value
+        };
+        fetch('https://script.google.com/macros/s/AKfycbw21_Wxj9rIqe8m7BPO2tRKi3wrmHwZZXvsHLyZ8dqtYJ_m6-obvpwtXHJfGzMdIgfT/exec', { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) });
+        alert('Merci ! Votre demande a été enregistrée. Je vous rappellerai au créneau choisi : ' + selectedSlot.textContent);
+        closeModal();
+        e.target.reset();
+    }
+
+    function changeSlide(btn, direction) {
+        const carousel = btn.closest('.realisation-carousel');
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = carousel.querySelectorAll('.dot');
+        let idx = Array.from(slides).findIndex(s => s.classList.contains('active'));
+        slides[idx].classList.remove('active'); dots[idx].classList.remove('active');
+        idx = (idx + direction + slides.length) % slides.length;
+        slides[idx].classList.add('active'); dots[idx].classList.add('active');
+    }
+    function goToSlide(dot, index) {
+        const carousel = dot.closest('.realisation-carousel');
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = carousel.querySelectorAll('.dot');
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        slides[index].classList.add('active'); dots[index].classList.add('active');
+    }
+
+    function toggleChat() {
+        const cw = document.getElementById('chatWindow');
+        cw.classList.toggle('active');
+        if (!cw.classList.contains('active')) resetChat();
+    }
+    function openDiagnosticIA() {
+        document.getElementById('chatWindow').classList.add('active');
+        startDiagnosticMode();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function selectMode(mode) {
+        currentMode = mode;
+        document.getElementById('modeSelector').style.display = 'none';
+        document.getElementById('chatMessages').style.display = 'flex';
+        document.getElementById('chatInput').style.display = 'flex';
+        document.getElementById('chatMessages').innerHTML = '';
+        if (mode === 'general') {
+            document.getElementById('quickButtons').style.display = 'flex';
+            addBotMessage("Bien sûr ! Posez-moi votre question sur les horaires, la zone d'intervention, les services ou les tarifs 😊");
+        } else {
+            document.getElementById('quickButtons').style.display = 'none';
+            startDiagnosticMode();
+        }
+    }
+    function startDiagnosticMode() {
+        currentMode = 'diagnostic';
+        document.getElementById('modeSelector').style.display = 'none';
+        document.getElementById('chatMessages').style.display = 'flex';
+        document.getElementById('chatInput').style.display = 'flex';
+        document.getElementById('quickButtons').style.display = 'none';
+        document.getElementById('chatMessages').innerHTML = '';
+        securityWarningShown = false;
+        resetDiagnosticContext();
+        addBotMessage("Bonjour ! 👋 Je suis l'assistant dépannage de Start Elec.");
+        addBotMessage("🔴 SÉCURITÉ ABSOLUE — À lire avant tout : Ne démontez jamais rien, n'ouvrez aucun boîtier, ne touchez aucun fil électrique, ne vous mettez jamais en danger. Je ne vous demanderai jamais d'effectuer une manipulation risquée. En cas de danger immédiat (fumée, odeur de brûlé), coupez le courant général et appelez les pompiers au 18.", 800);
+        addBotMessage("⚖️ Avertissement légal : Les conseils de cet assistant sont fournis à titre purement informatif. Start Elec et le propriétaire de ce site déclinent toute responsabilité pour tout dommage matériel, corporel ou accident pouvant survenir à la suite de manipulations réalisées par l'utilisateur sur son installation électrique. En cas de doute, contactez un électricien qualifié.", 2000);
+        addBotMessage("Avant de commencer : êtes-vous à l'aise pour effectuer des vérifications simples et sans danger (observer un tableau électrique, brancher ou débrancher un appareil, appuyer sur un interrupteur) ? Répondez OUI pour continuer, ou NON pour prendre rendez-vous directement.", 3400);
+        diagnosticContext.waitingFor = 'aptitude_check';
+    }
+    function backToMenu() {
+        document.getElementById('modeSelector').style.display = 'flex';
+        document.getElementById('chatMessages').style.display = 'none';
+        document.getElementById('quickButtons').style.display = 'none';
+        document.getElementById('chatInput').style.display = 'none';
+        currentMode = null;
+        resetDiagnosticContext();
+    }
+    function resetChat() {
+        backToMenu();
+        securityWarningShown = false;
+    }
+    function resetDiagnosticContext() {
+        diagnosticContext = { category: null, step: 0, waitingFor: null, actionSuggested: null, userResponses: [] };
+    }
+    function handleKeyPress(e) { if (e.key === 'Enter') sendMessage(); }
+    function sendMessage() {
+        const input = document.getElementById('userInput');
+        const message = input.value.trim();
+        if (!message) return;
+        addUserMessage(message);
+        input.value = '';
+        setTimeout(() => {
+            if (currentMode === 'general') respondToGeneral(message);
+            else respondToDiagnostic(message);
+        }, 400);
+    }
+    function askQuestion(q) { addUserMessage(q); setTimeout(() => respondToGeneral(q), 400); }
+    function addUserMessage(text) {
+        const d = document.getElementById('chatMessages');
+        const m = document.createElement('div');
+        m.className = 'chat-message user'; m.textContent = text;
+        d.appendChild(m); d.scrollTop = d.scrollHeight;
+    }
+    function addBotMessage(text, delay) {
+        const d = document.getElementById('chatMessages');
+        const doIt = () => {
+            const m = document.createElement('div');
+            m.className = 'chat-message bot'; m.textContent = text;
+            d.appendChild(m); d.scrollTop = d.scrollHeight;
+        };
+        delay ? setTimeout(doIt, delay) : doIt();
+    }
+
+    function norm(s) {
+        return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function respondToGeneral(message) {
+        const m = norm(message);
+        if (m.match(/^(bonjour|salut|bonsoir|hello|coucou|bj|slt)\s*[!,.]?\s*$/)) {
+            addBotMessage("Bonjour ! 😊 Comment puis-je vous aider ?");
+        } else if (m.includes('merci') || m.includes('super') || m.includes('nickel') || m.includes('parfait') || m.includes('top')) {
+            addBotMessage("Avec plaisir ! N'hésitez pas si vous avez d'autres questions 😊");
+        } else if (m.includes('horaire') || m.includes('ouvert') || m.includes('disponible') || m.includes('heure')) {
+            addBotMessage("Je suis disponible du lundi au vendredi de 8h à 18h. Pour les urgences, appelez-moi directement au 06 60 19 35 21.");
+        } else if (m.includes('urgent') || m.includes('urgence') || m.includes('depannage') || m.includes('vite')) {
+            addBotMessage("Pour les urgences, appelez-moi directement au 06 60 19 35 21. J'interviens le plus vite possible, parfois le jour même.");
+        } else if (m.includes('zone') || m.includes('deplac') || m.includes('secteur') || m.includes('orleans')) {
+            addBotMessage("J'interviens à Orléans et dans un rayon de 25km : Saint-Jean-de-Braye, Olivet, Fleury-les-Aubrais, Saran, Semoy, La Chapelle-Saint-Mesmin, Ingré, Chécy et bien d'autres.");
+        } else if (m.includes('tarif') || m.includes('prix') || m.includes('cout') || m.includes('combien') || m.includes('cher')) {
+            addBotMessage("Les tarifs dépendent des travaux. Chaque devis est gratuit et personnalisé — je viens sur place et je vous chiffre précisément. Pas de mauvaise surprise !");
+        } else if (m.includes('devis')) {
+            addBotMessage("Le devis est 100% gratuit ! On fixe un RDV, je passe voir votre installation, et je vous envoie le chiffrage rapidement.");
+        } else if (m.includes('delai') || m.includes('quand')) {
+            addBotMessage("Pour les petits travaux, je réserve souvent les vendredis. Si le devis est validé rapidement, je peux intervenir en quelques jours.");
+        } else if (m.includes('service') || m.includes('propose') || m.includes('travaux')) {
+            addBotMessage("Je fais : installation électrique, rénovation, mise aux normes NF C 15-100, dépannage, électricité tertiaire, alarme incendie et interphonie. Je ne fais pas encore la domotique, les bornes IRVE ni les portails.");
+        } else if (m.includes('domotique') || m.includes('borne') || m.includes('irve') || m.includes('portail')) {
+            addBotMessage("Je ne propose pas encore la domotique ni les bornes IRVE (formations en cours). Je ne fais pas les portails. Mais pour tout le reste en électricité, je suis là !");
+        } else if (m.includes('norme') || m.includes('consuel') || m.includes('conformite')) {
+            addBotMessage("Oui, je travaille aux normes NF C 15-100. Pour le CONSUEL, je peux vous accompagner lors d'une mise aux normes ou installation neuve.");
+        } else if (m.includes('assur') || m.includes('garanti')) {
+            addBotMessage("Oui, je suis assuré RC Pro et tous mes travaux sont garantis.");
+        } else if (m.includes('avis') || m.includes('client') || m.includes('google')) {
+            addBotMessage("Retrouvez les avis clients directement sur Google en cherchant 'Start Elec Orléans'.");
+        } else if (m.includes('adresse') || m.includes('localisation') || m.includes('situe')) {
+            addBotMessage("Je suis basé rue Maurice Berger, 45000 Orléans. J'interviens à domicile dans un rayon de 25km.");
+        } else if (m.includes('mail') || m.includes('email') || m.includes('contact') || m.includes('joindre')) {
+            addBotMessage("Par email : startelec45@gmail.com ou par téléphone au 06 60 19 35 21. Je réponds sous 24h aux emails.");
+        } else if (m.includes('au revoir') || m.includes('bonne journee') || m.includes('a bientot')) {
+            addBotMessage("Bonne journée ! N'hésitez pas à revenir si besoin 😊");
+        } else {
+            addBotMessage("Pour cette question, contactez-moi au 06 60 19 35 21 ou par email à startelec45@gmail.com. Je vous répondrai avec plaisir !");
+        }
+    }
+
+    function respondToDiagnostic(message) {
+        const m = norm(message);
+
+        // VÉRIFICATION APTITUDE EN PREMIER
+        if (diagnosticContext.waitingFor === 'aptitude_check') {
+            const oui = m.includes('oui') || m.includes('ouais') || m.includes('yes') || m.includes('ok') || m.includes('bien sur') || m.includes('allez') || m.includes('allez y') || m.includes('capable') || m.includes('a l aise') || m.includes('pas de probleme');
+            const non = m.includes('non') || m.includes('nope') || m.includes('pas trop') || m.includes('pas sure') || m.includes('pas sur') || m.includes('incapable') || m.includes('j ai peur') || m.includes('j\'ai peur') || m.includes('ne sais pas');
+            if (non) {
+                addBotMessage("Pas de souci du tout, c'est la bonne décision ! Il vaut mieux ne rien toucher si on n'est pas à l'aise — l'électricité ne pardonne pas.");
+                addBotMessage("Je vous invite à prendre rendez-vous directement : appelez-moi au 06 60 19 35 21 ou réservez un créneau via le bouton 'Réserver un appel gratuit' sur la page. J'interviendrai en toute sécurité.");
+                resetDiagnosticContext();
+            } else if (oui) {
+                addBotMessage("Parfait ! 👍 Rappel permanent : à aucun moment je ne vous demanderai de démonter quoi que ce soit, d'ouvrir un boîtier ou de toucher un fil. Uniquement des vérifications visuelles ou des branchements/débranchements simples.");
+                addBotMessage("Maintenant, décrivez-moi votre problème librement — disjoncteur qui saute, prise hors service, lumière qui ne s'allume plus, interrupteur... Je vous guide étape par étape.", 1200);
+                diagnosticContext.waitingFor = null;
+            } else {
+                addBotMessage("Je n'ai pas bien compris votre réponse 😊 Répondez simplement OUI si vous êtes à l'aise pour de petites vérifications, ou NON pour prendre rendez-vous directement.");
+            }
+            return;
+        }
+
+        // SALUTATIONS SEULES
+        if (!diagnosticContext.category && m.match(/^(bonjour|salut|bonsoir|hello|coucou|bj|slt)\s*[!,.]?\s*$/)) {
+            addBotMessage("Bonjour ! 😊 Décrivez-moi votre problème électrique, je suis là pour vous guider.");
+            return;
+        }
+        // MERCI / C'EST BON
+        if ((m.includes('merci') || m.includes('ca marche') || m.includes('c est bon') || m.includes('resolu') || m.includes('regle') || m.includes('nickel') || m.includes('parfait')) && !diagnosticContext.waitingFor) {
+            addBotMessage("Super, content que ça soit réglé ! 🎉 N'hésitez pas si d'autres problèmes surviennent.");
+            resetDiagnosticContext();
+            return;
+        }
+
+        // DANGERS IMMÉDIATS
+        if (m.includes('fumee') || (m.includes('feu') && m.includes('electr'))) {
+            addBotMessage("🚨 URGENCE : Évacuez si nécessaire et appelez les pompiers (18) immédiatement !");
+            addBotMessage("Coupez le disjoncteur général seulement si vous pouvez le faire en toute sécurité, sans vous approcher d'une zone de fumée.");
+            resetDiagnosticContext(); return;
+        }
+        if ((m.includes('odeur') && (m.includes('brul') || m.includes('brule'))) || m.includes('ca sent le brul')) {
+            addBotMessage("🔥 DANGER : Une odeur de brûlé est un signal d'alarme sérieux. Ne touchez à rien !");
+            addBotMessage("Coupez immédiatement le disjoncteur général. Appelez-moi en urgence au 06 60 19 35 21, et si ça s'aggrave, les pompiers (18).");
+            resetDiagnosticContext(); return;
+        }
+        if (m.includes('etincelle') || m.includes('arc electr') || (m.includes('arc') && m.includes('prise'))) {
+            addBotMessage("⚡ DANGER IMMÉDIAT : Des étincelles indiquent un problème grave. N'approchez pas !");
+            addBotMessage("Coupez le disjoncteur du circuit concerné sans toucher à l'équipement. Appelez-moi en urgence : 06 60 19 35 21.");
+            resetDiagnosticContext(); return;
+        }
+        if ((m.includes('chauffe') || m.includes('chaude') || m.includes('brulant')) && (m.includes('prise') || m.includes('interrupteur') || m.includes('tableau'))) {
+            addBotMessage("⚠️ DANGER : Un équipement électrique anormalement chaud est un risque d'incendie sérieux.");
+            addBotMessage("Débranchez tout appareil connecté à cet équipement et ne l'utilisez plus du tout. Appelez-moi sans attendre : 06 60 19 35 21.");
+            resetDiagnosticContext(); return;
+        }
+        if (m.includes('bruit') && (m.includes('tableau') || m.includes('disjoncteur') || m.includes('compteur'))) {
+            addBotMessage("⚠️ Un bruit anormal au tableau n'est jamais normal — grésillements, claquements, bourdonnements...");
+            addBotMessage("Ne touchez à rien. Contactez-moi dès que possible : 06 60 19 35 21.");
+            resetDiagnosticContext(); return;
+        }
+
+        // SI PAS DE CATÉGORIE : DÉTECTER L'INTENTION
+        if (!diagnosticContext.category) {
+            const cat = detectCategory(m);
+            if (cat) {
+                const intros = ["D'accord, voyons ça ensemble.", "OK, je vais vous guider.", "Compris, on va régler ça."];
+                addBotMessage(intros[Math.floor(Math.random() * intros.length)]);
+                addBotMessage("🔴 Rappel : Ne démontez rien, ne touchez aucun fil, ne vous mettez jamais en danger.", 600);
+                setTimeout(() => startFlow(cat, m), 1400);
+            } else if (m.match(/^(bonjour|salut|bonsoir|hello|coucou)/)) {
+                addBotMessage("Bonjour ! 👋 Décrivez-moi votre problème plus en détail, je vous guide.");
+            } else {
+                addBotMessage("Je n'ai pas bien identifié votre problème. Décrivez ce qui se passe : par exemple \"le disjoncteur saute\", \"une prise ne fonctionne plus\", \"la lumière clignote\"...");
+            }
+            return;
+        }
+
+        continueFlow(m);
+    }
+
+    function detectCategory(m) {
+        if (m.includes('plus de courant') || m.includes('plus d electricite') || m.includes('tout est eteint') || m.includes('panne generale') || m.includes('panne electrique') || m.includes('coupure totale') || m.includes('plus rien ne marche') || m.includes('maison dans le noir') || m.includes('tout a disjoncte') || m.includes('plus de jus') || (m.includes('rien') && m.includes('marche') && !m.includes('prise') && !m.includes('lumiere'))) return 'courant_general';
+        if (m.includes('differentiel') || (m.includes('gros') && m.includes('disjoncteur')) || (m.includes('interrupteur') && m.includes('differentiel'))) return 'differentiel';
+        if (m.includes('disjoncte') || m.includes('disjoncteur') || m.includes('compteur saute') || m.includes('ca saute') || m.includes('ca coupe') || m.includes('le courant saute') || m.includes('coupe tout seul') || (m.includes('tableau') && m.includes('saute'))) return 'disjoncteur';
+        if ((m.includes('prise') && (m.includes('marche pas') || m.includes('ne marche') || m.includes('fonctionne pas') || m.includes('ne fonctionne') || m.includes('hs') || m.includes('hors service') || m.includes('en panne'))) || m.includes('prise hs') || m.includes('prise en panne')) return 'prise';
+        if ((m.includes('lumiere') || m.includes('lampe') || m.includes('ampoule') || m.includes('eclairage') || m.includes('spot') || m.includes('plafonnier')) && m.includes('clignote')) return 'lumiere_clignote';
+        if ((m.includes('lumiere') || m.includes('lampe') || m.includes('ampoule') || m.includes('eclairage') || m.includes('spot') || m.includes('plafonnier')) && (m.includes('marche pas') || m.includes('ne marche') || m.includes('s allume pas') || m.includes('eteinte') || m.includes('fonctionne pas') || m.includes('grillee'))) return 'lumiere';
+        if ((m.includes('interrupteur') || m.includes('bouton') || m.includes('commande')) && (m.includes('marche pas') || m.includes('ne marche') || m.includes('fonctionne pas') || m.includes('hs') || m.includes('bloque'))) return 'interrupteur';
+        if (m.includes('variateur') || m.includes('dimmer')) return 'variateur';
+        if (m.includes('chauffe eau') || m.includes('chauffe-eau') || m.includes('cumulus') || m.includes('ballon') || (m.includes('eau chaude') && (m.includes('plus') || m.includes('froid')))) return 'chauffe_eau';
+        if (m.includes('vmc') || m.includes('ventilation') || (m.includes('extracteur') && m.includes('bain'))) return 'vmc';
+        if (m.includes('linky') || (m.includes('compteur') && (m.includes('bug') || m.includes('erreur') || m.includes('clignote') || m.includes('voyant')))) return 'linky';
+        if ((m.includes('exterieur') || m.includes('jardin') || m.includes('terrasse') || m.includes('garage') || m.includes('abri')) && (m.includes('prise') || m.includes('lumiere') || m.includes('courant') || m.includes('electrique'))) return 'exterieur';
+        if (m.includes('interphone') || m.includes('visiophone') || m.includes('portier') || m.includes('sonnette')) return 'interphone';
+        if ((m.includes('tableau') && (m.includes('vieux') || m.includes('ancien') || m.includes('norme') || m.includes('refaire') || m.includes('remplacer'))) || m.includes('mise aux normes') || m.includes('mise en conformite')) return 'tableau_ancien';
+        if (m.includes('multiprise') || m.includes('multi-prise') || (m.includes('trop') && m.includes('branche'))) return 'multiprise';
+        if (m.includes('rj45') || (m.includes('prise') && m.includes('internet') && !m.includes('wifi'))) return 'reseau';
+        return null;
+    }
+
+    function startFlow(cat, initialMsg) {
+        diagnosticContext.category = cat;
+        diagnosticContext.step = 0;
+        diagnosticContext.userResponses = [initialMsg];
+        const q = {
+            courant_general: ["Est-ce que toute la maison est sans courant, ou seulement une partie (une pièce, un circuit) ?", 'courant_q1'],
+            disjoncteur: ["À quel moment ça disjoncte ? Dès que vous remettez le disjoncteur, quand vous branchez un appareil, ou ça saute de façon aléatoire ?", 'disj_q1'],
+            differentiel: ["C'est bien le gros interrupteur différentiel (souvent en haut du tableau) qui saute ?", 'diff_q1'],
+            prise: ["Est-ce que les autres prises dans la même pièce fonctionnent correctement, ou elles sont également hors service ?", 'prise_q1'],
+            lumiere: ["C'est une seule lumière qui a un problème, ou plusieurs dans la maison ?", 'lum_q1'],
+            lumiere_clignote: ["Est-ce une ampoule LED ?", 'clig_q1'],
+            interrupteur: ["Quand vous actionnez l'interrupteur, il ne se passe absolument rien ?", 'inter_q1'],
+            variateur: ["Quel est le symptôme exact ? La lumière clignote, elle ne répond plus au variateur, ou elle est bloquée à un niveau ?", 'varia_q1'],
+            chauffe_eau: ["Votre chauffe-eau ne chauffe plus du tout ? Y a-t-il un disjoncteur dédié dans votre tableau (souvent noté CE ou CES) ?", 'ce_q1'],
+            vmc: ["La VMC ne tourne plus du tout, ou elle tourne mais fait un bruit anormal ?", 'vmc_q1'],
+            linky: ["Quel voyant ou message voyez-vous sur votre compteur Linky ?", 'linky_q1'],
+            exterieur: ["C'est quoi exactement qui ne fonctionne plus à l'extérieur — une prise, un éclairage, ou les deux ?", 'ext_q1'],
+            interphone: ["Quel est le problème avec l'interphone ? Il ne sonne plus, on ne s'entend pas, ou autre chose ?", 'ip_q1'],
+            tableau_ancien: ["Votre tableau a quel âge environ ? Et avez-vous des problèmes actuels (disjoncteurs qui sautent, pas de différentiel...) ?", 'tab_q1'],
+            multiprise: ["Combien d'appareils avez-vous branchés sur cette multiprise en même temps ?", 'mp_q1'],
+            reseau: ["C'est une prise réseau RJ45 qui ne fonctionne plus, ou vous souhaitez en faire installer une ?", 'res_q1'],
+        };
+        if (q[cat]) {
+            addBotMessage(q[cat][0]);
+            diagnosticContext.waitingFor = q[cat][1];
+        }
+    }
+
+    function continueFlow(m) {
+        const oui = m.includes('oui') || m.includes('exact') || m.includes('ouais') || m.includes('affirm') || m.includes('c est ca') || m.includes('correct') || m.includes('tout a fait') || m.includes('effectivement') || m.includes('yes');
+        const non = m.includes('non') || m.includes('nope') || m.includes('aucun') || m.includes('jamais') || (m.includes('pas') && !m.includes('marche pas'));
+        const wf = diagnosticContext.waitingFor;
+
+        if (wf === 'courant_q1') {
+            if (m.includes('toute') || m.includes('tout') || m.includes('maison') || m.includes('partout') || m.includes('appartement')) {
+                addBotMessage("Allez observer votre tableau électrique (sans toucher aux fils). Le disjoncteur principal (le plus gros, souvent en haut) est-il abaissé ou en position normale ?");
+                diagnosticContext.waitingFor = 'courant_q2';
+            } else {
+                addBotMessage("Un circuit partiel. Observez votre tableau — y a-t-il un petit disjoncteur abaissé ?");
+                diagnosticContext.waitingFor = 'courant_partiel';
+            }
+            return;
+        }
+        if (wf === 'courant_q2') {
+            if (m.includes('abaiss') || m.includes('bas') || m.includes('tombe') || m.includes('zero') || oui) {
+                addBotMessage("👉 Débranchez un maximum d'appareils (sans toucher aux fils, uniquement les fiches), puis essayez de remonter le disjoncteur avec son levier. Il tient ou il retombe ?");
+                diagnosticContext.waitingFor = 'courant_q3';
+            } else {
+                addBotMessage("Le disjoncteur est en position normale mais plus de courant. Est-ce que vos voisins ont aussi une coupure ?");
+                diagnosticContext.waitingFor = 'courant_voisins';
+            }
+            return;
+        }
+        if (wf === 'courant_voisins') {
+            if (oui) { addBotMessage("✅ C'est sûrement une coupure Enedis. Appelez le 09 70 83 19 00 pour une estimation de rétablissement. Ça ne dépend pas de votre installation."); }
+            else { addBotMessage("Le problème vient de votre installation. Il faut que j'intervienne — ne touchez à rien. Contactez-moi au 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+        if (wf === 'courant_q3') {
+            if (m.includes('tient') || m.includes('revenu') || oui) {
+                addBotMessage("✅ Super ! Un disjoncteur s'était déclenché. Rebranchez vos appareils un par un pour voir si l'un d'eux cause le problème. Si ça recommence souvent, contactez-moi.");
+            } else {
+                addBotMessage("Le disjoncteur retombe sans appareils — problème sur le câblage ou court-circuit. Ne touchez à rien, il faut que j'intervienne. Appelez-moi : 06 60 19 35 21.");
+            }
+            resetDiagnosticContext(); return;
+        }
+        if (wf === 'courant_partiel') {
+            if (oui || m.includes('abaiss')) {
+                addBotMessage("👉 Remontez ce disjoncteur avec son levier. Les équipements fonctionnent à nouveau ?");
+                diagnosticContext.waitingFor = 'courant_partiel2';
+            } else {
+                addBotMessage("Tous les disjoncteurs sont en position normale mais un circuit ne fonctionne pas. Problème de câblage — ne touchez à rien, je dois intervenir : 06 60 19 35 21.");
+                resetDiagnosticContext();
+            }
+            return;
+        }
+        if (wf === 'courant_partiel2') {
+            if (oui || m.includes('marche') || m.includes('fonctionne') || m.includes('revenu')) { addBotMessage("✅ Parfait ! Le disjoncteur s'était déclenché. Si ça recommence souvent, il peut y avoir une surcharge sur ce circuit — appelez-moi pour vérifier."); }
+            else { addBotMessage("Ça ne revient pas malgré le disjoncteur remonté. Je dois passer vérifier : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'disj_q1') {
+            if (m.includes('des que') || m.includes('immediat') || m.includes('tout de suite') || m.includes('direct')) {
+                addBotMessage("👉 Débranchez TOUS vos appareils (uniquement les fiches, sans toucher aux fils), puis réarmez le disjoncteur avec son levier. Il tient maintenant ?");
+                diagnosticContext.waitingFor = 'disj_vide';
+            } else if (m.includes('branche') || m.includes('appareil') || m.includes('quand je')) {
+                addBotMessage("Quel appareil semble déclencher ça ? (four, lave-linge, machine à café, ou vous ne savez pas ?)");
+                diagnosticContext.waitingFor = 'disj_appareil';
+            } else if (m.includes('nuit') || m.includes('heures creuses')) {
+                addBotMessage("Ça ressemble au chauffe-eau ou chauffage en heures creuses. Avez-vous un ballon d'eau chaude ?");
+                diagnosticContext.waitingFor = 'disj_nuit';
+            } else {
+                addBotMessage("Les coupures aléatoires peuvent venir d'une surcharge ou d'un défaut d'isolement. Utilisez-vous souvent beaucoup d'appareils en même temps ?");
+                diagnosticContext.waitingFor = 'disj_aleat';
+            }
+            return;
+        }
+        if (wf === 'disj_vide') {
+            if (oui || m.includes('tient') || m.includes('stable')) {
+                addBotMessage("Le problème vient d'un appareil. 👉 Rebranchez-les un par un, en attendant 30 secondes entre chaque. Lequel fait sauter le disjoncteur ?");
+                diagnosticContext.waitingFor = 'disj_ident';
+            } else {
+                addBotMessage("Il saute même sans rien de branché — problème sur le câblage. Ne touchez à rien, je dois intervenir : 06 60 19 35 21.");
+                resetDiagnosticContext();
+            }
+            return;
+        }
+        if (wf === 'disj_ident') {
+            if (oui || m.includes('trouve') || m.includes('c est')) { addBotMessage("✅ L'appareil est défectueux. Ne le rebranchez plus et faites-le réparer ou remplacer. Votre installation est OK."); }
+            else { addBotMessage("Difficile à identifier seul. Je peux intervenir avec un appareil de mesure pour trouver la cause exacte. Contactez-moi : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+        if (wf === 'disj_appareil') {
+            addBotMessage("👉 Débranchez cet appareil (uniquement la fiche) et réarmez le disjoncteur. Ça tient maintenant ?");
+            diagnosticContext.waitingFor = 'disj_app2'; return;
+        }
+        if (wf === 'disj_app2') {
+            if (oui || m.includes('tient') || m.includes('stable')) { addBotMessage("✅ C'était cet appareil le problème. Il est défectueux — ne le rebranchez pas, faites-le vérifier par un réparateur."); }
+            else { addBotMessage("Ça saute encore. Il peut y avoir plusieurs appareils en cause ou un problème sur le câblage. Contactez-moi : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+        if (wf === 'disj_nuit') {
+            if (oui) { addBotMessage("👉 Observez le disjoncteur noté CE ou CES dans votre tableau. S'il est abaissé, remontez-le. Si ça retombe, la résistance du chauffe-eau est peut-être HS — appelez-moi : 06 60 19 35 21."); }
+            else { addBotMessage("Notez l'heure précise où ça coupe. Si ça se répète, contactez-moi pour un diagnostic : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+        if (wf === 'disj_aleat') {
+            if (oui || m.includes('beaucoup') || m.includes('plusieurs')) {
+                addBotMessage("Probablement une surcharge. Chaque circuit est limité à 16A ou 20A. Évitez de cumuler four, lave-linge et chauffage en même temps. Si ça persiste, je peux vérifier si votre installation a besoin de plus de circuits.");
+            } else {
+                addBotMessage("Un défaut d'isolement peut causer des coupures aléatoires. C'est difficile à diagnostiquer sans appareil de mesure. Ne touchez à rien, je peux intervenir : 06 60 19 35 21.");
+            }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'diff_q1') {
+            if (oui) {
+                addBotMessage("Le différentiel protège contre les fuites de courant. 👉 Débranchez tous vos appareils (uniquement les fiches), remontez le différentiel, puis rebranchez un par un. Lequel fait sauter le différentiel ?");
+                diagnosticContext.waitingFor = 'diff_test';
+            } else {
+                addBotMessage("Décrivez-moi plus précisément quel équipement saute et dans quelle situation.");
+                diagnosticContext.waitingFor = 'diff_detail';
+            }
+            return;
+        }
+        if (wf === 'diff_test') {
+            if (oui || m.includes('trouve')) { addBotMessage("✅ Cet appareil a une fuite de courant — il est dangereux. Ne le rebranchez plus et faites-le vérifier."); }
+            else { addBotMessage("Si le différentiel saute sans aucun appareil branché, il y a une fuite dans l'installation. Ne touchez à rien, je dois intervenir : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+        if (wf === 'diff_detail') {
+            addBotMessage("Pour ce type de problème sur le différentiel, une mesure avec un contrôleur d'isolement est nécessaire. Contactez-moi : 06 60 19 35 21.");
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'prise_q1') {
+            if (oui || m.includes('les autres') || m.includes('reste') || m.includes('fonctionne')) {
+                addBotMessage("👉 Testez la prise avec un appareil différent que vous savez fonctionnel (chargeur de téléphone, lampe). L'appareil fonctionne-t-il sur cette prise ?");
+                diagnosticContext.waitingFor = 'prise_test';
+            } else {
+                addBotMessage("Plusieurs prises hors service dans une même zone — ça vient souvent d'un disjoncteur divisionnaire abaissé. Observez votre tableau, y a-t-il un petit disjoncteur baissé ?");
+                diagnosticContext.waitingFor = 'prise_tableau';
+            }
+            return;
+        }
+        if (wf === 'prise_test') {
+            if (non || m.includes('toujours pas') || m.includes('rien')) { addBotMessage("La prise est hors service. Ne l'utilisez plus pour éviter tout risque. Je peux la remplacer facilement — contactez-moi : 06 60 19 35 21."); }
+            else { addBotMessage("✅ La prise fonctionne correctement ! C'était votre appareil qui avait un problème, pas la prise elle-même."); }
+            resetDiagnosticContext(); return;
+        }
+        if (wf === 'prise_tableau') {
+            if (oui || m.includes('abaiss') || m.includes('trouve')) {
+                addBotMessage("👉 Remontez ce disjoncteur avec son levier. Les prises fonctionnent à nouveau ?");
+                diagnosticContext.waitingFor = 'prise_retour';
+            } else {
+                addBotMessage("Tous les disjoncteurs sont en position normale mais les prises ne fonctionnent pas — problème de câblage. Je dois intervenir : 06 60 19 35 21.");
+                resetDiagnosticContext();
+            }
+            return;
+        }
+        if (wf === 'prise_retour') {
+            if (oui || m.includes('marche') || m.includes('fonctionne')) { addBotMessage("✅ Le disjoncteur s'était déclenché, probablement par une surcharge. Si ça recommence souvent, évitez de trop charger ce circuit."); }
+            else { addBotMessage("Le disjoncteur remonte mais les prises ne reprennent pas. Problème de câblage — je dois passer : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'lum_q1') {
+            if (m.includes('une') || m.includes('seule') || m.includes('unique')) {
+                addBotMessage("Avez-vous essayé de changer l'ampoule ? Ça paraît évident mais c'est souvent la cause 😄");
+                diagnosticContext.waitingFor = 'lum_ampoule';
+            } else {
+                addBotMessage("Plusieurs lumières en panne dans une zone — vérifiez votre tableau. Y a-t-il un disjoncteur abaissé ?");
+                diagnosticContext.waitingFor = 'lum_tableau';
+            }
+            return;
+        }
+        if (wf === 'lum_ampoule') {
+            if (oui || m.includes('change') || m.includes('essaye') || m.includes('deja')) {
+                addBotMessage("Si une ampoule neuve ne fonctionne pas non plus, le problème vient du luminaire ou du circuit. Je peux venir vérifier : 06 60 19 35 21.");
+                resetDiagnosticContext();
+            } else {
+                addBotMessage("👉 Coupez l'interrupteur, changez l'ampoule par une neuve (attention à l'ampoule froide uniquement, jamais à chaud), et testez. Ça fonctionne ?");
+                diagnosticContext.waitingFor = 'lum_apres';
+            }
+            return;
+        }
+        if (wf === 'lum_apres') {
+            if (oui || m.includes('marche') || m.includes('allume') || m.includes('fonctionne')) { addBotMessage("✅ C'était l'ampoule qui était grillée. Problème résolu !"); }
+            else { addBotMessage("Ampoule neuve mais toujours rien — le problème vient du luminaire ou du circuit. Contactez-moi : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+        if (wf === 'lum_tableau') {
+            if (oui || m.includes('abaiss')) {
+                addBotMessage("👉 Remontez ce disjoncteur. Les lumières reviennent ?");
+                diagnosticContext.waitingFor = 'lum_retour';
+            } else {
+                addBotMessage("Tous les disjoncteurs OK mais les lumières ne fonctionnent pas — problème sur le circuit éclairage. Je dois intervenir : 06 60 19 35 21.");
+                resetDiagnosticContext();
+            }
+            return;
+        }
+        if (wf === 'lum_retour') {
+            if (oui || m.includes('marche') || m.includes('allume')) { addBotMessage("✅ Le disjoncteur éclairage s'était déclenché. Vérifiez si vous n'avez pas trop de spots sur un même circuit."); }
+            else { addBotMessage("Disjoncteur remonté mais lumières éteintes — problème de câblage. Je dois venir : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'clig_q1') {
+            if (oui || m.includes('led')) {
+                addBotMessage("Avez-vous un variateur sur ce circuit ?");
+                diagnosticContext.waitingFor = 'clig_varia';
+            } else {
+                addBotMessage("Une ampoule classique qui clignote peut indiquer un mauvais contact. Changez d'abord l'ampoule. Si ça continue, contactez-moi.");
+                resetDiagnosticContext();
+            }
+            return;
+        }
+        if (wf === 'clig_varia') {
+            if (oui || m.includes('variateur')) { addBotMessage("👉 Vérifiez que votre ampoule LED est bien marquée 'dimmable' sur l'emballage. Si oui et que ça clignote encore, le variateur est peut-être défectueux — je peux le remplacer."); }
+            else { addBotMessage("Sans variateur, le clignotement vient d'un mauvais contact ou d'un problème de tension. Changez l'ampoule. Si ça persiste, je dois vérifier le circuit."); }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'inter_q1') {
+            if (oui || m.includes('rien') || m.includes('ne se passe')) {
+                addBotMessage("Le circuit d'éclairage fonctionne-t-il quand même (via un autre interrupteur ou en vérifiant le disjoncteur éclairage dans le tableau) ?");
+                diagnosticContext.waitingFor = 'inter_q2';
+            } else {
+                addBotMessage("Décrivez-moi ce qui se passe exactement quand vous l'actionnez.");
+                diagnosticContext.waitingFor = 'inter_detail';
+            }
+            return;
+        }
+        if (wf === 'inter_q2') {
+            if (oui || m.includes('fonctionne') || m.includes('marche') || m.includes('autre')) { addBotMessage("L'interrupteur lui-même est défectueux — mécanisme HS. C'est un remplacement simple et rapide. Je peux passer le changer : 06 60 19 35 21."); }
+            else { addBotMessage("Tout le circuit ne répond pas. Vérifiez si un disjoncteur éclairage est abaissé dans votre tableau. Sinon, je dois intervenir."); }
+            resetDiagnosticContext(); return;
+        }
+        if (wf === 'inter_detail') {
+            addBotMessage("Pour les problèmes d'interrupteur complexes (va-et-vient, interrupteur connecté...), il vaut mieux que je vérifie directement. Contactez-moi : 06 60 19 35 21.");
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'varia_q1') {
+            if (m.includes('clignote') || m.includes('scintille')) { addBotMessage("Assurez-vous que vos ampoules sont bien marquées 'dimmable'. Si c'est le cas et que ça clignote encore, le variateur est peut-être défectueux. Je peux le remplacer : 06 60 19 35 21."); }
+            else if (m.includes('bloque') || m.includes('repond pas')) { addBotMessage("Coupez le disjoncteur, attendez 30 secondes, réenclenchez. Si ça ne règle pas le problème, le variateur doit être remplacé — contactez-moi."); }
+            else { addBotMessage("Pour les variateurs, c'est souvent une compatibilité LED ou une panne du mécanisme. Contactez-moi : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'ce_q1') {
+            if (oui || m.includes('abaiss') || m.includes('bas') || m.includes('tombe')) {
+                addBotMessage("Remontez-le. Si l'eau est à nouveau chaude dans quelques heures, c'était une surcharge. Si le disjoncteur retombe, la résistance est probablement HS — contactez-moi : 06 60 19 35 21.");
+            } else {
+                addBotMessage("Le disjoncteur est en place mais l'eau reste froide. Le thermostat ou la résistance est défectueux — je peux intervenir : 06 60 19 35 21.");
+            }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'vmc_q1') {
+            if (m.includes('bruit') || m.includes('son') || m.includes('anormal') || m.includes('fort')) { addBotMessage("Nettoyez les bouches de ventilation accessibles et le filtre si possible. Si le bruit persiste, le moteur est usé — je peux le remplacer : 06 60 19 35 21."); }
+            else { addBotMessage("VMC qui ne tourne plus — vérifiez son disjoncteur dans le tableau. S'il est en place mais la VMC reste éteinte, le moteur est HS. Je peux intervenir : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'linky_q1') {
+            if (m.includes('rouge') || m.includes('clignote') || m.includes('erreur')) { addBotMessage("Un voyant rouge sur le Linky peut indiquer une coupure Enedis ou un problème de contrat. Appelez Enedis au 09 70 83 19 00 — c'est eux qui gèrent le compteur Linky. Si le problème est dans l'installation après le compteur, je peux intervenir."); }
+            else { addBotMessage("Le compteur Linky est géré par Enedis (09 70 83 19 00). Pour les problèmes dans votre installation après le compteur, je suis là."); }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'ext_q1') {
+            addBotMessage("Les circuits extérieurs s'humidifient parfois. Observez si le disjoncteur dédié à l'extérieur est abaissé dans votre tableau.");
+            addBotMessage("Si le disjoncteur est OK mais rien ne fonctionne, il peut y avoir de l'humidité dans un boîtier ou un câble abîmé. Ne touchez à rien, contactez-moi : 06 60 19 35 21.");
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'ip_q1') {
+            if (m.includes('sonne pas') || m.includes('ne sonne') || m.includes('sonnerie')) { addBotMessage("Essayez de couper et recouper l'alimentation de l'interphone (prise ou disjoncteur dédié) comme un redémarrage. Si ça ne change rien, je peux vérifier."); }
+            else if (m.includes('entend pas') || m.includes('son')) { addBotMessage("Cherchez un réglage de volume sur le boîtier intérieur. Si ça ne résout pas le problème, contactez-moi : 06 60 19 35 21."); }
+            else { addBotMessage("Pour les problèmes d'interphonie complexes, il vaut mieux que je vienne vérifier les câblages. Contactez-moi : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'tab_q1') {
+            addBotMessage("Un tableau de plus de 20-25 ans n'est souvent plus aux normes NF C 15-100 : pas de différentiel 30mA, disjoncteurs vétustes, circuits insuffisants...");
+            addBotMessage("Ce n'est pas toujours urgent si tout fonctionne, mais c'est un vrai risque pour la sécurité. Je peux faire un diagnostic gratuit et vous dire exactement ce qui doit être mis à jour — contactez-moi.");
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'mp_q1') {
+            addBotMessage("Une multiprise est limitée à environ 3500W maximum. Le four seul consomme 2000-3500W, le lave-linge pareil. Ne branchez jamais deux gros appareils sur la même multiprise.");
+            addBotMessage("Répartissez sur différentes prises murales. Si vous manquez de prises dans une pièce, je peux en installer de nouvelles — contactez-moi.");
+            resetDiagnosticContext(); return;
+        }
+
+        if (wf === 'res_q1') {
+            if (m.includes('ne fonctionne') || m.includes('marche pas') || m.includes('hs') || m.includes('hors service')) { addBotMessage("Une prise RJ45 hors service peut venir d'un câble débranché au tableau de brassage ou d'une prise mal sertie. Vérifiez que votre switch ou votre box est bien allumé. Si le problème persiste, je peux intervenir."); }
+            else { addBotMessage("Je peux poser des prises réseau RJ45 et faire le câblage structuré complet. Contactez-moi pour un devis gratuit : 06 60 19 35 21."); }
+            resetDiagnosticContext(); return;
+        }
+
+        addBotMessage("Je n'ai pas bien saisi votre réponse. Pouvez-vous me dire simplement : est-ce que ça fonctionne ou non ? Ou décrivez ce que vous observez exactement.");
+    }
+
+    function resetDiagnosticContext() {
+        setTimeout(() => {
+            diagnosticContext = { category: null, step: 0, waitingFor: null, actionSuggested: null, userResponses: [] };
+        }, 2500);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            if (this.getAttribute('href') !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
