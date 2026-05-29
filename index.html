@@ -3,7 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO de base -->
     <title>Start Elec - Électricien Orléans | Installation & Dépannage 24/7</title>
+    <meta name="description" content="Start Elec, votre électricien de confiance à Orléans et ses environs (25km). Installation, rénovation et dépannage électrique 24h/24 et 7j/7. Devis gratuit.">
+    <meta name="keywords" content="electricien Orleans, depannage electrique Orleans, installation electrique, renovation electrique, tableau electrique, Start Elec, electricite Orleans, urgence electricien, electricien Olivet, electricien Fleury-les-Aubrais">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.startelec45.fr/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.startelec45.fr/">
+    <meta property="og:title" content="Start Elec - Électricien Orléans | Installation & Dépannage 24/7">
+    <meta property="og:description" content="Start Elec, votre électricien de confiance à Orléans. Installation, rénovation et dépannage électrique rapide. Devis gratuit sous 24h.">
+    <meta property="og:image" content="https://www.startelec45.fr/LOGO_start_elec1.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.startelec45.fr/">
+    <meta name="twitter:title" content="Start Elec - Électricien Orléans | Installation & Dépannage 24/7">
+    <meta name="twitter:description" content="Start Elec, votre électricien de confiance à Orléans. Installation, rénovation et dépannage électrique rapide. Devis gratuit sous 24h.">
+    <meta name="twitter:image" content="https://www.startelec45.fr/LOGO_start_elec1.png">
+    
+    <!-- Données structurées Schema.org pour Google (SEO Local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Start Elec",
+      "image": "https://www.startelec45.fr/LOGO_start_elec1.png",
+      "@id": "https://www.startelec45.fr/#organization",
+      "url": "https://www.startelec45.fr/",
+      "telephone": "+33660193521",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue Maurice Berger",
+        "addressLocality": "Orléans",
+        "postalCode": "45000",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.90298,
+        "longitude": 1.90382
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Orléans et alentours (25km)"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -423,10 +486,6 @@
         .service-card:hover .service-icon {
             background: var(--rouge-principal);
             transform: scale(1.1);
-        }
-
-        .service-card:hover .service-icon {
-            filter: brightness(0) invert(1);
         }
 
         .service-title {
@@ -1063,6 +1122,71 @@
             background: var(--rouge-hover);
         }
 
+        /* STYLES DU NOUVEAU CHATBOT À CHOIX */
+        .chatbot-choices {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #E5E5E5;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            max-height: 200px;
+            overflow-y: auto;
+            background: var(--blanc);
+        }
+
+        .choice-btn {
+            background: var(--gris-clair);
+            border: 1px solid #E5E5E5;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--noir);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+            width: 100%;
+        }
+
+        .choice-btn:hover {
+            background: var(--gris-moyen);
+            color: var(--blanc);
+            border-color: var(--gris-moyen);
+            transform: translateY(-1px);
+        }
+
+        /* Boutons d'action spécifiques (CTA) */
+        .choice-btn.cta-call {
+            background: #10B981; /* Vert */
+            color: var(--blanc);
+            border-color: #10B981;
+        }
+        .choice-btn.cta-call:hover {
+            background: #059669;
+            border-color: #059669;
+        }
+
+        .choice-btn.cta-form {
+            background: var(--rouge-principal); /* Rouge */
+            color: var(--blanc);
+            border-color: var(--rouge-principal);
+        }
+        .choice-btn.cta-form:hover {
+            background: var(--rouge-hover);
+            border-color: var(--rouge-hover);
+        }
+
+        .choice-btn.cta-mail {
+            background: #3B82F6; /* Bleu */
+            color: var(--blanc);
+            border-color: #3B82F6;
+        }
+        .choice-btn.cta-mail:hover {
+            background: #2563EB;
+            border-color: #2563EB;
+        }
+
         .back-btn {
             background: transparent !important;
             color: var(--noir) !important;
@@ -1454,11 +1578,6 @@
                         <span>→</span>
                     </a>
                 </div>
-                <div style="margin-top: 1.5rem; text-align: center;">
-                    <p style="color: var(--gris-moyen); font-size: 0.95rem;">
-                        Ou appelez directement : <a href="tel:0660193521" style="color: var(--noir); text-decoration: none; font-weight: 500;">06 60 19 35 21</a>
-                    </p>
-                </div>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">15 ans</span>
@@ -1732,17 +1851,10 @@
                 </div>
                 <div class="contact-info">
                     <div class="info-item">
-                        <div class="info-icon">📞</div>
-                        <div class="info-content">
-                            <h3>Téléphone</h3>
-                            <p><a href="tel:0660193521">06 60 19 35 21</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
                         <div class="info-icon">✉️</div>
                         <div class="info-content">
                             <h3>Email</h3>
-                            <p><a href="/cdn-cgi/l/email-protection#c5b6b1a4b7b1a0a9a0a6f1f085a2a8a4aca9eba6aaa8"><span class="__cf_email__" data-cfemail="8efdfaeffcfaebe2ebedbabbcee9e3efe7e2a0ede1e3">[email&#160;protected]</span></a></p>
+                            <p><a href="mailto:startelec45@gmail.com">startelec45@gmail.com</a></p>
                             <p style="font-size: 0.9rem; margin-top: 0.5rem;">Réponse sous 24h</p>
                         </div>
                     </div>
@@ -1768,7 +1880,7 @@
                         <span style="color: var(--gris-moyen);">Fermé</span>
                     </div>
                     <div style="padding: 1rem; background: var(--gris-clair); border-radius: 8px; border-left: 4px solid var(--rouge-principal);">
-                        <p style="margin: 0; color: var(--noir); font-size: 0.95rem;">💡 <strong>Dépannage urgent ?</strong> Appelez-moi, je fais mon possible pour intervenir rapidement selon mes disponibilités.</p>
+                        <p style="margin: 0; color: var(--noir); font-size: 0.95rem;">💡 <strong>Dépannage urgent ?</strong> Lancez le diagnostic en ligne ci-contre pour obtenir une assistance immédiate ou être mis en relation.</p>
                     </div>
                 </div>
             </div>
@@ -1849,7 +1961,7 @@
                             <div class="time-slot" onclick="selectTimeSlot(this)">Ven 19h-19h30</div>
                         </div>
                         <p style="margin-top: 1rem; color: var(--gris-moyen); font-size: 0.9rem;">
-                            💡 <strong>Pas disponible sur ces créneaux ?</strong> Envoyez-moi un email à <a href="/cdn-cgi/l/email-protection#bfcccbdecdcbdad3dadc8b8affd8d2ded6d391dcd0d2" style="color: var(--rouge-principal);"><span class="__cf_email__" data-cfemail="b2c1c6d3c0c6d7ded7d18687f2d5dfd3dbde9cd1dddf">[email&#160;protected]</span></a> et nous trouverons un autre moment.
+                            💡 <strong>Pas disponible sur ces créneaux ?</strong> Envoyez-moi un email à <a href="mailto:startelec45@gmail.com" style="color: var(--rouge-principal);">startelec45@gmail.com</a> et nous trouverons un autre moment.
                         </p>
                     </div>
                     <div class="form-group">
@@ -1862,7 +1974,7 @@
         </div>
     </div>
 
-    <!-- CHATBOT AMÉLIORÉ -->
+    <!-- CHATBOT AMÉLIORÉ (SÉCURITÉ & SUIVI PROPRIÉTAIRE) -->
     <div class="chatbot">
         <button class="chatbot-trigger" onclick="toggleChat()">💬</button>
         <div class="chatbot-window" id="chatWindow">
@@ -1871,37 +1983,12 @@
                 <button class="close-chat" onclick="toggleChat()">×</button>
             </div>
             
-            <!-- Sélection du mode -->
-            <div class="chatbot-mode-selector" id="modeSelector">
-                <button class="mode-btn" onclick="selectMode('general')">
-                    <span class="mode-icon">💬</span>
-                    <span class="mode-title">Questions générales</span>
-                    <span class="mode-desc">Horaires, tarifs, services...</span>
-                </button>
-                <button class="mode-btn diagnostic-btn" onclick="selectMode('diagnostic')">
-                    <span class="mode-icon">🔧</span>
-                    <span class="mode-title">Dépannage IA en ligne</span>
-                    <span class="mode-desc">Résolvez votre panne étape par étape</span>
-                </button>
+            <div class="chatbot-messages" id="chatMessages">
+                <!-- Les messages s'affichent ici -->
             </div>
 
-            <div class="chatbot-messages" id="chatMessages" style="display: none;">
-                <div class="chat-message bot">
-                    Bonjour ! 👋 Je suis l'assistant virtuel de Start Elec. Comment puis-je vous aider ?
-                </div>
-            </div>
-
-            <div class="quick-questions" id="quickButtons" style="display: none;">
-                <button class="quick-btn" onclick="askQuestion('Quels sont vos horaires ?')">Horaires ?</button>
-                <button class="quick-btn" onclick="askQuestion('Faites-vous les urgences ?')">Urgences ?</button>
-                <button class="quick-btn" onclick="askQuestion('Zone d\'intervention ?')">Zone ?</button>
-                <button class="quick-btn" onclick="askQuestion('Tarifs ?')">Tarifs ?</button>
-                <button class="back-btn" onclick="backToMenu()">← Retour menu</button>
-            </div>
-
-            <div class="chat-input-container" id="chatInput" style="display: none;">
-                <input type="text" id="userInput" placeholder="Posez votre question..." onkeypress="handleKeyPress(event)">
-                <button onclick="sendMessage()">Envoyer</button>
+            <div class="chatbot-choices" id="chatChoices">
+                <!-- Les boutons de choix s'affichent ici -->
             </div>
         </div>
     </div>
@@ -1962,554 +2049,198 @@
     }
 
     function toggleChat() {
-        const cw = document.getElementById('chatWindow');
-        cw.classList.toggle('active');
-        if (!cw.classList.contains('active')) resetChat();
+        toggleChatbot();
     }
+
+    function toggleChatbot(forceOpen = null) {
+        if (forceOpen !== null) {
+            forceOpen ? chatWindow.classList.add('active') : chatWindow.classList.remove('active');
+        } else {
+            chatWindow.classList.toggle('active');
+        }
+        if (chatWindow.classList.contains('active') && chatMessages.children.length === 0) {
+            initChat();
+        }
+    }
+
     function openDiagnosticIA() {
-        document.getElementById('chatWindow').classList.add('active');
-        startDiagnosticMode();
+        toggleChatbot(true);
+        validerClausesSecurite();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    function selectMode(mode) {
-        currentMode = mode;
-        document.getElementById('modeSelector').style.display = 'none';
-        document.getElementById('chatMessages').style.display = 'flex';
-        document.getElementById('chatInput').style.display = 'flex';
-        document.getElementById('chatMessages').innerHTML = '';
-        if (mode === 'general') {
-            document.getElementById('quickButtons').style.display = 'flex';
-            addBotMessage("Bien sûr ! Posez-moi votre question sur les horaires, la zone d'intervention, les services ou les tarifs 😊");
-        } else {
-            document.getElementById('quickButtons').style.display = 'none';
-            startDiagnosticMode();
-        }
+
+    function addMessage(text, isBot = true) {
+        const bubble = document.createElement('div');
+        bubble.className = `chat-message ${isBot ? 'bot' : 'user'}`;
+        bubble.innerHTML = text;
+        chatMessages.appendChild(bubble);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
-    function startDiagnosticMode() {
-        currentMode = 'diagnostic';
-        document.getElementById('modeSelector').style.display = 'none';
-        document.getElementById('chatMessages').style.display = 'flex';
-        document.getElementById('chatInput').style.display = 'flex';
-        document.getElementById('quickButtons').style.display = 'none';
-        document.getElementById('chatMessages').innerHTML = '';
-        securityWarningShown = false;
-        resetDiagnosticContext();
-        addBotMessage("Bonjour ! 👋 Je suis l'assistant dépannage de Start Elec.");
-        addBotMessage("🔴 SÉCURITÉ ABSOLUE — À lire avant tout : Ne démontez jamais rien, n'ouvrez aucun boîtier, ne touchez aucun fil électrique, ne vous mettez jamais en danger. Je ne vous demanderai jamais d'effectuer une manipulation risquée. En cas de danger immédiat (fumée, odeur de brûlé), coupez le courant général et appelez les pompiers au 18.", 800);
-        addBotMessage("⚖️ Avertissement légal : Les conseils de cet assistant sont fournis à titre purement informatif. Start Elec et le propriétaire de ce site déclinent toute responsabilité pour tout dommage matériel, corporel ou accident pouvant survenir à la suite de manipulations réalisées par l'utilisateur sur son installation électrique. En cas de doute, contactez un électricien qualifié.", 2000);
-        addBotMessage("Avant de commencer : êtes-vous à l'aise pour effectuer des vérifications simples et sans danger (observer un tableau électrique, brancher ou débrancher un appareil, appuyer sur un interrupteur) ? Répondez OUI pour continuer, ou NON pour prendre rendez-vous directement.", 3400);
-        diagnosticContext.waitingFor = 'aptitude_check';
+
+    function setChoices(choicesArray) {
+        chatChoices.innerHTML = '';
+        choicesArray.forEach(choice => {
+            const btn = document.createElement('button');
+            
+            if (choice.type === 'call') btn.className = 'choice-btn cta-call';
+            else if (choice.type === 'form') btn.className = 'choice-btn cta-form';
+            else if (choice.type === 'mail') btn.className = 'choice-btn cta-mail';
+            else btn.className = 'choice-btn';
+            
+            btn.innerText = choice.text;
+            btn.onclick = () => {
+                addMessage(choice.text, false);
+                choice.action();
+            };
+            chatChoices.appendChild(btn);
+        });
     }
-    function backToMenu() {
-        document.getElementById('modeSelector').style.display = 'flex';
-        document.getElementById('chatMessages').style.display = 'none';
-        document.getElementById('quickButtons').style.display = 'none';
-        document.getElementById('chatInput').style.display = 'none';
-        currentMode = null;
-        resetDiagnosticContext();
+
+    // 1. ACCUEIL DIRECT ET ULTRA-COURT
+    function initChat() {
+        chatMessages.innerHTML = '';
+        addMessage("Bonjour ! Que souhaitez-vous faire ? ⚡");
+        setChoices([
+            { text: "🔧 Lancer un diagnostic de panne", action: validerClausesSecurite },
+            { text: "📐 Projet de travaux / Rénovation", action: startTravaux },
+            { text: "✉️ Contacter l'entreprise", action: contactDirect }
+        ]);
     }
-    function resetChat() {
-        backToMenu();
-        securityWarningShown = false;
+
+    // 2. PRÉVENTION DANGER ET CLAUSES JURIDIQUES OBLIGATOIRES
+    function validerClausesSecurite() {
+        addMessage("⚠️ **AVERTISSEMENT SÉCURITÉ & CLAUSE JURIDIQUE :**<br>L'électricité présente des risques mortels d'électrocution. Ne touchez jamais à un fil dénudé, aux bornes internes d'un tableau sous tension ou à des zones humides. Cet outil est un assistant d'orientation indicatif et ne remplace pas l'expertise d'un professionnel. Start Elec décline toute responsabilité en cas de mauvaise manipulation.");
+        setChoices([
+            { text: "✅ J'ai pris connaissance des risques et je reste en sécurité", action: startDiagnostic },
+            { text: "❌ Je préfère ne toucher à rien et réserver un rappel", type: "form", action: () => { openModal(); toggleChatbot(false); } }
+        ]);
     }
-    function resetDiagnosticContext() {
-        diagnosticContext = { category: null, step: 0, waitingFor: null, actionSuggested: null, userResponses: [] };
+
+    // 3. ENTRÉE DANS LE DIAGNOSTIC INTERACTIF APPROFONDI
+    function startDiagnostic() {
+        addMessage("Quel est le type de panne rencontré ?");
+        setChoices([
+            { text: "⚫ Coupure générale (Plus rien ne marche)", action: diagCoupureGale },
+            { text: "🔌 Prises ou Éclairages défectueux", action: diagPrisesLum },
+            { text: "🔥 Chauffage ou Ballon d'eau chaude", action: diagThermique },
+            { text: "↩️ Retour au menu", action: initChat}
+        ]);
     }
-    function handleKeyPress(e) { if (e.key === 'Enter') sendMessage(); }
-    function sendMessage() {
-        const input = document.getElementById('userInput');
-        const message = input.value.trim();
-        if (!message) return;
-        addUserMessage(message);
-        input.value = '';
+
+    // CONTROLE CONTINU DE SATISFACTION (EVITE QUE LE CLIENT SE PERDE)
+    function verifierEtape(actionSuivante) {
         setTimeout(() => {
-            if (currentMode === 'general') respondToGeneral(message);
-            else respondToDiagnostic(message);
-        }, 400);
-    }
-    function askQuestion(q) { addUserMessage(q); setTimeout(() => respondToGeneral(q), 400); }
-    function addUserMessage(text) {
-        const d = document.getElementById('chatMessages');
-        const m = document.createElement('div');
-        m.className = 'chat-message user'; m.textContent = text;
-        d.appendChild(m); d.scrollTop = d.scrollHeight;
-    }
-    function addBotMessage(text, delay) {
-        const d = document.getElementById('chatMessages');
-        const doIt = () => {
-            const m = document.createElement('div');
-            m.className = 'chat-message bot'; m.textContent = text;
-            d.appendChild(m); d.scrollTop = d.scrollHeight;
-        };
-        delay ? setTimeout(doIt, delay) : doIt();
+            addMessage("👉 Est-ce que vous vous en sortez avec ces vérifications ou êtes-vous perdu ?");
+            setChoices([
+                { text: "👍 Tout est clair, je continue", action: actionSuivante },
+                { text: "🤔 Je suis perdu, je préfère réserver un rappel", type: "form", action: () => { openModal(); toggleChatbot(false); } }
+            ]);
+        }, 600);
     }
 
-    function norm(s) {
-        return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    // --- BRANCHES DE RECHERCHE DE PANNE APPROFONDIE ---
+
+    // A. Coupure Générale
+    function diagCoupureGale() {
+        addMessage("Vérifions l'environnement immédiat : vos voisins ou l'éclairage public de la rue sont-ils également coupés ?");
+        setChoices([
+            { text: "Oui, coupure générale de quartier", action: () => {
+                addMessage("**Panne réseau externe (Enedis).**<br>Le problème provient du réseau public. Débranchez vos appareils sensibles en attendant le rétablissement de la tension.");
+                proposerContactFin(true);
+            }},
+            { text: "Non, cela ne concerne que mon logement", action: () => {
+                addMessage("**Vérification du Tableau :** Ouvrez votre coffret de répartition. Le disjoncteur d'abonné général (le gros boîtier d'EDF/Enedis) est-il abaissé (sur 0) ou enclenché (sur 1) ?");
+                setChoices([
+                    { text: "Le général est sur 0 (OFF)", action: () => {
+                        addMessage("**Court-circuit franc ou dépassement de puissance.**<br>Si vous venez d'enclencher un appareil énergivore (four, plaque, pompe à chaleur), débranchez-le immédiatement.");
+                        verifierEtape(methodeIsolementGeneral);
+                    }},
+                    { text: "Le général est sur 1 (ON)", action: () => {
+                        addMessage("Regardez votre ligne de disjoncteurs. Un module de tête de ligne (interrupteur différentiel 30mA, plus large que les autres disjoncteurs individuels) est-il abaissé ?");
+                        verifierEtape(methodeIsolementDifferentiel);
+                    }}
+                ]);
+            }}
+        ]);
     }
 
-    function respondToGeneral(message) {
-        const m = norm(message);
-        if (m.match(/^(bonjour|salut|bonsoir|hello|coucou|bj|slt)\s*[!,.]?\s*$/)) {
-            addBotMessage("Bonjour ! 😊 Comment puis-je vous aider ?");
-        } else if (m.includes('merci') || m.includes('super') || m.includes('nickel') || m.includes('parfait') || m.includes('top')) {
-            addBotMessage("Avec plaisir ! N'hésitez pas si vous avez d'autres questions 😊");
-        } else if (m.includes('horaire') || m.includes('ouvert') || m.includes('disponible') || m.includes('heure')) {
-            addBotMessage("Je suis disponible du lundi au vendredi de 8h à 18h. Pour les urgences, appelez-moi directement au 06 60 19 35 21.");
-        } else if (m.includes('urgent') || m.includes('urgence') || m.includes('depannage') || m.includes('vite')) {
-            addBotMessage("Pour les urgences, appelez-moi directement au 06 60 19 35 21. J'interviens le plus vite possible, parfois le jour même.");
-        } else if (m.includes('zone') || m.includes('deplac') || m.includes('secteur') || m.includes('orleans')) {
-            addBotMessage("J'interviens à Orléans et dans un rayon de 25km : Saint-Jean-de-Braye, Olivet, Fleury-les-Aubrais, Saran, Semoy, La Chapelle-Saint-Mesmin, Ingré, Chécy et bien d'autres.");
-        } else if (m.includes('tarif') || m.includes('prix') || m.includes('cout') || m.includes('combien') || m.includes('cher')) {
-            addBotMessage("Les tarifs dépendent des travaux. Chaque devis est gratuit et personnalisé — je viens sur place et je vous chiffre précisément. Pas de mauvaise surprise !");
-        } else if (m.includes('devis')) {
-            addBotMessage("Le devis est 100% gratuit ! On fixe un RDV, je passe voir votre installation, et je vous envoie le chiffrage rapidement.");
-        } else if (m.includes('delai') || m.includes('quand')) {
-            addBotMessage("Pour les petits travaux, je réserve souvent les vendredis. Si le devis est validé rapidement, je peux intervenir en quelques jours.");
-        } else if (m.includes('service') || m.includes('propose') || m.includes('travaux')) {
-            addBotMessage("Je fais : installation électrique, rénovation, mise aux normes NF C 15-100, dépannage, électricité tertiaire, alarme incendie et interphonie. Je ne fais pas encore la domotique, les bornes IRVE ni les portails.");
-        } else if (m.includes('domotique') || m.includes('borne') || m.includes('irve') || m.includes('portail')) {
-            addBotMessage("Je ne propose pas encore la domotique ni les bornes IRVE (formations en cours). Je ne fais pas les portails. Mais pour tout le reste en électricité, je suis là !");
-        } else if (m.includes('norme') || m.includes('consuel') || m.includes('conformite')) {
-            addBotMessage("Oui, je travaille aux normes NF C 15-100. Pour le CONSUEL, je peux vous accompagner lors d'une mise aux normes ou installation neuve.");
-        } else if (m.includes('assur') || m.includes('garanti')) {
-            addBotMessage("Oui, je suis assuré RC Pro et tous mes travaux sont garantis.");
-        } else if (m.includes('avis') || m.includes('client') || m.includes('google')) {
-            addBotMessage("Retrouvez les avis clients directement sur Google en cherchant 'Start Elec Orléans'.");
-        } else if (m.includes('adresse') || m.includes('localisation') || m.includes('situe')) {
-            addBotMessage("Je suis basé rue Maurice Berger, 45000 Orléans. J'interviens à domicile dans un rayon de 25km.");
-        } else if (m.includes('mail') || m.includes('email') || m.includes('contact') || m.includes('joindre')) {
-            addBotMessage("Par email : startelec45@gmail.com ou par téléphone au 06 60 19 35 21. Je réponds sous 24h aux emails.");
-        } else if (m.includes('au revoir') || m.includes('bonne journee') || m.includes('a bientot')) {
-            addBotMessage("Bonne journée ! N'hésitez pas à revenir si besoin 😊");
-        } else {
-            addBotMessage("Pour cette question, contactez-moi au 06 60 19 35 21 ou par email à startelec45@gmail.com. Je vous répondrai avec plaisir !");
-        }
+    function methodeIsolementGeneral() {
+        addMessage("**Méthode d'isolement du général :**<br>1. Abaissez l'intégralité des disjoncteurs divisionnaires de votre tableau.<br>2. Réarmez le disjoncteur général Enedis (il doit désormais tenir en position haute).<br>3. Remontez les disjoncteurs individuels un par un.<br><br>Dès que le général saute à nouveau, notez la ligne coupable (Ex: Cuisine, Prises Salon) et débranchez tous les équipements de cette zone.");
+        proposerContactFin();
     }
 
-    function respondToDiagnostic(message) {
-        const m = norm(message);
-
-        // VÉRIFICATION APTITUDE EN PREMIER
-        if (diagnosticContext.waitingFor === 'aptitude_check') {
-            const oui = m.includes('oui') || m.includes('ouais') || m.includes('yes') || m.includes('ok') || m.includes('bien sur') || m.includes('allez') || m.includes('allez y') || m.includes('capable') || m.includes('a l aise') || m.includes('pas de probleme');
-            const non = m.includes('non') || m.includes('nope') || m.includes('pas trop') || m.includes('pas sure') || m.includes('pas sur') || m.includes('incapable') || m.includes('j ai peur') || m.includes('j\'ai peur') || m.includes('ne sais pas');
-            if (non) {
-                addBotMessage("Pas de souci du tout, c'est la bonne décision ! Il vaut mieux ne rien toucher si on n'est pas à l'aise — l'électricité ne pardonne pas.");
-                addBotMessage("Je vous invite à prendre rendez-vous directement : appelez-moi au 06 60 19 35 21 ou réservez un créneau via le bouton 'Réserver un appel gratuit' sur la page. J'interviendrai en toute sécurité.");
-                resetDiagnosticContext();
-            } else if (oui) {
-                addBotMessage("Parfait ! 👍 Rappel permanent : à aucun moment je ne vous demanderai de démonter quoi que ce soit, d'ouvrir un boîtier ou de toucher un fil. Uniquement des vérifications visuelles ou des branchements/débranchements simples.");
-                addBotMessage("Maintenant, décrivez-moi votre problème librement — disjoncteur qui saute, prise hors service, lumière qui ne s'allume plus, interrupteur... Je vous guide étape par étape.", 1200);
-                diagnosticContext.waitingFor = null;
-            } else {
-                addBotMessage("Je n'ai pas bien compris votre réponse 😊 Répondez simplement OUI si vous êtes à l'aise pour de petites vérifications, ou NON pour prendre rendez-vous directement.");
-            }
-            return;
-        }
-
-        // SALUTATIONS SEULES
-        if (!diagnosticContext.category && m.match(/^(bonjour|salut|bonsoir|hello|coucou|bj|slt)\s*[!,.]?\s*$/)) {
-            addBotMessage("Bonjour ! 😊 Décrivez-moi votre problème électrique, je suis là pour vous guider.");
-            return;
-        }
-        // MERCI / C'EST BON
-        if ((m.includes('merci') || m.includes('ca marche') || m.includes('c est bon') || m.includes('resolu') || m.includes('regle') || m.includes('nickel') || m.includes('parfait')) && !diagnosticContext.waitingFor) {
-            addBotMessage("Super, content que ça soit réglé ! 🎉 N'hésitez pas si d'autres problèmes surviennent.");
-            resetDiagnosticContext();
-            return;
-        }
-
-        // DANGERS IMMÉDIATS
-        if (m.includes('fumee') || (m.includes('feu') && m.includes('electr'))) {
-            addBotMessage("🚨 URGENCE : Évacuez si nécessaire et appelez les pompiers (18) immédiatement !");
-            addBotMessage("Coupez le disjoncteur général seulement si vous pouvez le faire en toute sécurité, sans vous approcher d'une zone de fumée.");
-            resetDiagnosticContext(); return;
-        }
-        if ((m.includes('odeur') && (m.includes('brul') || m.includes('brule'))) || m.includes('ca sent le brul')) {
-            addBotMessage("🔥 DANGER : Une odeur de brûlé est un signal d'alarme sérieux. Ne touchez à rien !");
-            addBotMessage("Coupez immédiatement le disjoncteur général. Appelez-moi en urgence au 06 60 19 35 21, et si ça s'aggrave, les pompiers (18).");
-            resetDiagnosticContext(); return;
-        }
-        if (m.includes('etincelle') || m.includes('arc electr') || (m.includes('arc') && m.includes('prise'))) {
-            addBotMessage("⚡ DANGER IMMÉDIAT : Des étincelles indiquent un problème grave. N'approchez pas !");
-            addBotMessage("Coupez le disjoncteur du circuit concerné sans toucher à l'équipement. Appelez-moi en urgence : 06 60 19 35 21.");
-            resetDiagnosticContext(); return;
-        }
-        if ((m.includes('chauffe') || m.includes('chaude') || m.includes('brulant')) && (m.includes('prise') || m.includes('interrupteur') || m.includes('tableau'))) {
-            addBotMessage("⚠️ DANGER : Un équipement électrique anormalement chaud est un risque d'incendie sérieux.");
-            addBotMessage("Débranchez tout appareil connecté à cet équipement et ne l'utilisez plus du tout. Appelez-moi sans attendre : 06 60 19 35 21.");
-            resetDiagnosticContext(); return;
-        }
-        if (m.includes('bruit') && (m.includes('tableau') || m.includes('disjoncteur') || m.includes('compteur'))) {
-            addBotMessage("⚠️ Un bruit anormal au tableau n'est jamais normal — grésillements, claquements, bourdonnements...");
-            addBotMessage("Ne touchez à rien. Contactez-moi dès que possible : 06 60 19 35 21.");
-            resetDiagnosticContext(); return;
-        }
-
-        // SI PAS DE CATÉGORIE : DÉTECTER L'INTENTION
-        if (!diagnosticContext.category) {
-            const cat = detectCategory(m);
-            if (cat) {
-                const intros = ["D'accord, voyons ça ensemble.", "OK, je vais vous guider.", "Compris, on va régler ça."];
-                addBotMessage(intros[Math.floor(Math.random() * intros.length)]);
-                addBotMessage("🔴 Rappel : Ne démontez rien, ne touchez aucun fil, ne vous mettez jamais en danger.", 600);
-                setTimeout(() => startFlow(cat, m), 1400);
-            } else if (m.match(/^(bonjour|salut|bonsoir|hello|coucou)/)) {
-                addBotMessage("Bonjour ! 👋 Décrivez-moi votre problème plus en détail, je vous guide.");
-            } else {
-                addBotMessage("Je n'ai pas bien identifié votre problème. Décrivez ce qui se passe : par exemple \"le disjoncteur saute\", \"une prise ne fonctionne plus\", \"la lumière clignote\"...");
-            }
-            return;
-        }
-
-        continueFlow(m);
+    // B. Prises & Lumières
+    function diagPrisesLum() {
+        addMessage("Le dysfonctionnement concerne-t-il un élément isolé ou tout un secteur ?");
+        setChoices([
+            { text: "Une seule prise ou un seul point lumineux précis", action: () => {
+                addMessage("Débranchez l'appareil inséré. S'il s'agit d'un luminaire, l'ampoule ou le ballast peut être en court-circuit. S'il s'agit d'une prise murale, les bornes arrière du mécanisme se sont peut-être desserrées suite à des tractions.");
+                verifierEtape(() => proposerContactFin(false));
+            }},
+            { text: "Plusieurs prises ou éclairages coupés simultanément", action: () => {
+                addMessage("Dirigez-vous vers le tableau électrique. Voyez-vous un disjoncteur divisionnaire (petit calibre 10A, 16A ou 20A) basculé vers le bas ?");
+                setChoices([
+                    { text: "Oui, un divisionnaire individuel a sauté", action: () => {
+                        addMessage("Le circuit est saturé par une surcharge ou en court-circuit direct. Retirez les derniers appareils branchés sur cette zone.");
+                        verifierEtape(() => proposerContactFin(false));
+                    }},
+                    { text: "Non, tous les modules du tableau sont relevés", action: () => {
+                        addMessage("**Panne sur les connexions amont.** Un fil de neutre ou de phase s'est probablement déconnecté au sein d'une boîte de dérivation masquée ou en cascade derrière une autre prise de la pièce.");
+                        proposerContactFin(true);
+                    }}
+                ]);
+            }}
+        ]);
     }
 
-    function detectCategory(m) {
-        if (m.includes('plus de courant') || m.includes('plus d electricite') || m.includes('tout est eteint') || m.includes('panne generale') || m.includes('panne electrique') || m.includes('coupure totale') || m.includes('plus rien ne marche') || m.includes('maison dans le noir') || m.includes('tout a disjoncte') || m.includes('plus de jus') || (m.includes('rien') && m.includes('marche') && !m.includes('prise') && !m.includes('lumiere'))) return 'courant_general';
-        if (m.includes('differentiel') || (m.includes('gros') && m.includes('disjoncteur')) || (m.includes('interrupteur') && m.includes('differentiel'))) return 'differentiel';
-        if (m.includes('disjoncte') || m.includes('disjoncteur') || m.includes('compteur saute') || m.includes('ca saute') || m.includes('ca coupe') || m.includes('le courant saute') || m.includes('coupe tout seul') || (m.includes('tableau') && m.includes('saute'))) return 'disjoncteur';
-        if ((m.includes('prise') && (m.includes('marche pas') || m.includes('ne marche') || m.includes('fonctionne pas') || m.includes('ne fonctionne') || m.includes('hs') || m.includes('hors service') || m.includes('en panne'))) || m.includes('prise hs') || m.includes('prise en panne')) return 'prise';
-        if ((m.includes('lumiere') || m.includes('lampe') || m.includes('ampoule') || m.includes('eclairage') || m.includes('spot') || m.includes('plafonnier')) && m.includes('clignote')) return 'lumiere_clignote';
-        if ((m.includes('lumiere') || m.includes('lampe') || m.includes('ampoule') || m.includes('eclairage') || m.includes('spot') || m.includes('plafonnier')) && (m.includes('marche pas') || m.includes('ne marche') || m.includes('s allume pas') || m.includes('eteinte') || m.includes('fonctionne pas') || m.includes('grillee'))) return 'lumiere';
-        if ((m.includes('interrupteur') || m.includes('bouton') || m.includes('commande')) && (m.includes('marche pas') || m.includes('ne marche') || m.includes('fonctionne pas') || m.includes('hs') || m.includes('bloque'))) return 'interrupteur';
-        if (m.includes('variateur') || m.includes('dimmer')) return 'variateur';
-        if (m.includes('chauffe eau') || m.includes('chauffe-eau') || m.includes('cumulus') || m.includes('ballon') || (m.includes('eau chaude') && (m.includes('plus') || m.includes('froid')))) return 'chauffe_eau';
-        if (m.includes('vmc') || m.includes('ventilation') || (m.includes('extracteur') && m.includes('bain'))) return 'vmc';
-        if (m.includes('linky') || (m.includes('compteur') && (m.includes('bug') || m.includes('erreur') || m.includes('clignote') || m.includes('voyant')))) return 'linky';
-        if ((m.includes('exterieur') || m.includes('jardin') || m.includes('terrasse') || m.includes('garage') || m.includes('abri')) && (m.includes('prise') || m.includes('lumiere') || m.includes('courant') || m.includes('electrique'))) return 'exterieur';
-        if (m.includes('interphone') || m.includes('visiophone') || m.includes('portier') || m.includes('sonnette')) return 'interphone';
-        if ((m.includes('tableau') && (m.includes('vieux') || m.includes('ancien') || m.includes('norme') || m.includes('refaire') || m.includes('remplacer'))) || m.includes('mise aux normes') || m.includes('mise en conformite')) return 'tableau_ancien';
-        if (m.includes('multiprise') || m.includes('multi-prise') || (m.includes('trop') && m.includes('branche'))) return 'multiprise';
-        if (m.includes('rj45') || (m.includes('prise') && m.includes('internet') && !m.includes('wifi'))) return 'reseau';
-        return null;
+    // C. Thermique & Eau chaude
+    function diagThermique() {
+        addMessage("Sélectionnez le type d'appareil en défaut :");
+        setChoices([
+            { text: "Chauffe-eau / Ballon d'eau chaude", action: () => {
+                addMessage("**Plus d'eau chaude ? Test du contacteur :**<br>Repérez le module Jour/Nuit (positions I-Auto-0) sur votre tableau électrique. Basculez-le manuellement sur **I (Marche forcée)**.<br><br>Si votre compteur s'emballe ou indique une consommation et que vous obtenez de l'eau chaude d'ici 2 à 3 heures, la panne provient de la commande Heures Creuses (relais Enedis ou contacteur HS). Si le compteur ne réagit pas, la sécurité thermique du thermostat sous le ballon s'est déclenchée ou la résistance est coupée.");
+                verifierEtape(() => proposerContactFin(false));
+            }},
+            { text: "Radiateur électrique", action: () => {
+                addMessage("Si le radiateur reste totalement éteint, vérifiez son disjoncteur dédié au tableau. Si l'écran s'allume mais qu'il ne produit aucune chaleur, la sonde de température ou la carte électronique de régulation est défectueuse.");
+                proposerContactFin(false);
+            }}
+        ]);
     }
 
-    function startFlow(cat, initialMsg) {
-        diagnosticContext.category = cat;
-        diagnosticContext.step = 0;
-        diagnosticContext.userResponses = [initialMsg];
-        const q = {
-            courant_general: ["Est-ce que toute la maison est sans courant, ou seulement une partie (une pièce, un circuit) ?", 'courant_q1'],
-            disjoncteur: ["À quel moment ça disjoncte ? Dès que vous remettez le disjoncteur, quand vous branchez un appareil, ou ça saute de façon aléatoire ?", 'disj_q1'],
-            differentiel: ["C'est bien le gros interrupteur différentiel (souvent en haut du tableau) qui saute ?", 'diff_q1'],
-            prise: ["Est-ce que les autres prises dans la même pièce fonctionnent correctement, ou elles sont également hors service ?", 'prise_q1'],
-            lumiere: ["C'est une seule lumière qui a un problème, ou plusieurs dans la maison ?", 'lum_q1'],
-            lumiere_clignote: ["Est-ce une ampoule LED ?", 'clig_q1'],
-            interrupteur: ["Quand vous actionnez l'interrupteur, il ne se passe absolument rien ?", 'inter_q1'],
-            variateur: ["Quel est le symptôme exact ? La lumière clignote, elle ne répond plus au variateur, ou elle est bloquée à un niveau ?", 'varia_q1'],
-            chauffe_eau: ["Votre chauffe-eau ne chauffe plus du tout ? Y a-t-il un disjoncteur dédié dans votre tableau (souvent noté CE ou CES) ?", 'ce_q1'],
-            vmc: ["La VMC ne tourne plus du tout, ou elle tourne mais fait un bruit anormal ?", 'vmc_q1'],
-            linky: ["Quel voyant ou message voyez-vous sur votre compteur Linky ?", 'linky_q1'],
-            exterieur: ["C'est quoi exactement qui ne fonctionne plus à l'extérieur — une prise, un éclairage, ou les deux ?", 'ext_q1'],
-            interphone: ["Quel est le problème avec l'interphone ? Il ne sonne plus, on ne s'entend pas, ou autre chose ?", 'ip_q1'],
-            tableau_ancien: ["Votre tableau a quel âge environ ? Et avez-vous des problèmes actuels (disjoncteurs qui sautent, pas de différentiel...) ?", 'tab_q1'],
-            multiprise: ["Combien d'appareils avez-vous branchés sur cette multiprise en même temps ?", 'mp_q1'],
-            reseau: ["C'est une prise réseau RJ45 qui ne fonctionne plus, ou vous souhaitez en faire installer une ?", 'res_q1'],
-        };
-        if (q[cat]) {
-            addBotMessage(q[cat][0]);
-            diagnosticContext.waitingFor = q[cat][1];
-        }
+    // D. Travaux / Rénovation
+    function startTravaux() {
+        addMessage("Sélectionnez votre besoin d'installation ou de rénovation :");
+        setChoices([
+            { text: "Rénovation complète / Mise aux normes NF C 15-100", action: () => { addMessage("Nous analysons l'état existant pour réaliser une réfection complète et sécurisée de votre logement."); proposerContactFin(true); } },
+            { text: "Changement de tableau électrique", action: () => { addMessage("Idéal pour supprimer les anciens coupe-circuits à fusibles au profit de disjoncteurs automatiques modernes."); proposerContactFin(true); } },
+            { text: "Réseau de communication / Prises informatique RJ45", action: () => { addMessage("Câblage structuré permettant de distribuer un débit internet optimal et stable dans chaque pièce."); proposerContactFin(true); } }
+        ]);
     }
 
-    function continueFlow(m) {
-        const oui = m.includes('oui') || m.includes('exact') || m.includes('ouais') || m.includes('affirm') || m.includes('c est ca') || m.includes('correct') || m.includes('tout a fait') || m.includes('effectivement') || m.includes('yes');
-        const non = m.includes('non') || m.includes('nope') || m.includes('aucun') || m.includes('jamais') || (m.includes('pas') && !m.includes('marche pas'));
-        const wf = diagnosticContext.waitingFor;
-
-        if (wf === 'courant_q1') {
-            if (m.includes('toute') || m.includes('tout') || m.includes('maison') || m.includes('partout') || m.includes('appartement')) {
-                addBotMessage("Allez observer votre tableau électrique (sans toucher aux fils). Le disjoncteur principal (le plus gros, souvent en haut) est-il abaissé ou en position normale ?");
-                diagnosticContext.waitingFor = 'courant_q2';
-            } else {
-                addBotMessage("Un circuit partiel. Observez votre tableau — y a-t-il un petit disjoncteur abaissé ?");
-                diagnosticContext.waitingFor = 'courant_partiel';
+    // FIN DE SEQUENCE ET OPTIONS DE CONTACT
+    function proposerContactFin(direct = false) {
+        setTimeout(() => {
+            if (!direct) {
+                addMessage("Si le défaut persiste après ces tests, une recherche de panne approfondie avec des outils de mesure professionnels (mesureur d'isolement, VAT) est requise.");
             }
-            return;
-        }
-        if (wf === 'courant_q2') {
-            if (m.includes('abaiss') || m.includes('bas') || m.includes('tombe') || m.includes('zero') || oui) {
-                addBotMessage("👉 Débranchez un maximum d'appareils (sans toucher aux fils, uniquement les fiches), puis essayez de remonter le disjoncteur avec son levier. Il tient ou il retombe ?");
-                diagnosticContext.waitingFor = 'courant_q3';
-            } else {
-                addBotMessage("Le disjoncteur est en position normale mais plus de courant. Est-ce que vos voisins ont aussi une coupure ?");
-                diagnosticContext.waitingFor = 'courant_voisins';
-            }
-            return;
-        }
-        if (wf === 'courant_voisins') {
-            if (oui) { addBotMessage("✅ C'est sûrement une coupure Enedis. Appelez le 09 70 83 19 00 pour une estimation de rétablissement. Ça ne dépend pas de votre installation."); }
-            else { addBotMessage("Le problème vient de votre installation. Il faut que j'intervienne — ne touchez à rien. Contactez-moi au 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-        if (wf === 'courant_q3') {
-            if (m.includes('tient') || m.includes('revenu') || oui) {
-                addBotMessage("✅ Super ! Un disjoncteur s'était déclenché. Rebranchez vos appareils un par un pour voir si l'un d'eux cause le problème. Si ça recommence souvent, contactez-moi.");
-            } else {
-                addBotMessage("Le disjoncteur retombe sans appareils — problème sur le câblage ou court-circuit. Ne touchez à rien, il faut que j'intervienne. Appelez-moi : 06 60 19 35 21.");
-            }
-            resetDiagnosticContext(); return;
-        }
-        if (wf === 'courant_partiel') {
-            if (oui || m.includes('abaiss')) {
-                addBotMessage("👉 Remontez ce disjoncteur avec son levier. Les équipements fonctionnent à nouveau ?");
-                diagnosticContext.waitingFor = 'courant_partiel2';
-            } else {
-                addBotMessage("Tous les disjoncteurs sont en position normale mais un circuit ne fonctionne pas. Problème de câblage — ne touchez à rien, je dois intervenir : 06 60 19 35 21.");
-                resetDiagnosticContext();
-            }
-            return;
-        }
-        if (wf === 'courant_partiel2') {
-            if (oui || m.includes('marche') || m.includes('fonctionne') || m.includes('revenu')) { addBotMessage("✅ Parfait ! Le disjoncteur s'était déclenché. Si ça recommence souvent, il peut y avoir une surcharge sur ce circuit — appelez-moi pour vérifier."); }
-            else { addBotMessage("Ça ne revient pas malgré le disjoncteur remonté. Je dois passer vérifier : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
+            addMessage("Comment préférez-vous échanger pour la suite de votre demande ?");
+            setChoices([
+                { text: "📞 Me joindre directement", type: "call", action: () => { window.location.href = "tel:0660193521"; } },
+                { text: "📅 Programmer un rappel (Formulaire)", type: "form", action: () => { openModal(); toggleChatbot(false); } },
+                { text: "✉️ Envoyer un e-mail", type: "mail", action: () => { window.location.href = "mailto:startelec45@gmail.com"; } },
+                { text: "🔄 Recommencer un test", action: startDiagnostic }
+            ]);
+        }, 1000);
+    }
 
-        if (wf === 'disj_q1') {
-            if (m.includes('des que') || m.includes('immediat') || m.includes('tout de suite') || m.includes('direct')) {
-                addBotMessage("👉 Débranchez TOUS vos appareils (uniquement les fiches, sans toucher aux fils), puis réarmez le disjoncteur avec son levier. Il tient maintenant ?");
-                diagnosticContext.waitingFor = 'disj_vide';
-            } else if (m.includes('branche') || m.includes('appareil') || m.includes('quand je')) {
-                addBotMessage("Quel appareil semble déclencher ça ? (four, lave-linge, machine à café, ou vous ne savez pas ?)");
-                diagnosticContext.waitingFor = 'disj_appareil';
-            } else if (m.includes('nuit') || m.includes('heures creuses')) {
-                addBotMessage("Ça ressemble au chauffe-eau ou chauffage en heures creuses. Avez-vous un ballon d'eau chaude ?");
-                diagnosticContext.waitingFor = 'disj_nuit';
-            } else {
-                addBotMessage("Les coupures aléatoires peuvent venir d'une surcharge ou d'un défaut d'isolement. Utilisez-vous souvent beaucoup d'appareils en même temps ?");
-                diagnosticContext.waitingFor = 'disj_aleat';
-            }
-            return;
-        }
-        if (wf === 'disj_vide') {
-            if (oui || m.includes('tient') || m.includes('stable')) {
-                addBotMessage("Le problème vient d'un appareil. 👉 Rebranchez-les un par un, en attendant 30 secondes entre chaque. Lequel fait sauter le disjoncteur ?");
-                diagnosticContext.waitingFor = 'disj_ident';
-            } else {
-                addBotMessage("Il saute même sans rien de branché — problème sur le câblage. Ne touchez à rien, je dois intervenir : 06 60 19 35 21.");
-                resetDiagnosticContext();
-            }
-            return;
-        }
-        if (wf === 'disj_ident') {
-            if (oui || m.includes('trouve') || m.includes('c est')) { addBotMessage("✅ L'appareil est défectueux. Ne le rebranchez plus et faites-le réparer ou remplacer. Votre installation est OK."); }
-            else { addBotMessage("Difficile à identifier seul. Je peux intervenir avec un appareil de mesure pour trouver la cause exacte. Contactez-moi : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-        if (wf === 'disj_appareil') {
-            addBotMessage("👉 Débranchez cet appareil (uniquement la fiche) et réarmez le disjoncteur. Ça tient maintenant ?");
-            diagnosticContext.waitingFor = 'disj_app2'; return;
-        }
-        if (wf === 'disj_app2') {
-            if (oui || m.includes('tient') || m.includes('stable')) { addBotMessage("✅ C'était cet appareil le problème. Il est défectueux — ne le rebranchez pas, faites-le vérifier par un réparateur."); }
-            else { addBotMessage("Ça saute encore. Il peut y avoir plusieurs appareils en cause ou un problème sur le câblage. Contactez-moi : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-        if (wf === 'disj_nuit') {
-            if (oui) { addBotMessage("👉 Observez le disjoncteur noté CE ou CES dans votre tableau. S'il est abaissé, remontez-le. Si ça retombe, la résistance du chauffe-eau est peut-être HS — appelez-moi : 06 60 19 35 21."); }
-            else { addBotMessage("Notez l'heure précise où ça coupe. Si ça se répète, contactez-moi pour un diagnostic : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-        if (wf === 'disj_aleat') {
-            if (oui || m.includes('beaucoup') || m.includes('plusieurs')) {
-                addBotMessage("Probablement une surcharge. Chaque circuit est limité à 16A ou 20A. Évitez de cumuler four, lave-linge et chauffage en même temps. Si ça persiste, je peux vérifier si votre installation a besoin de plus de circuits.");
-            } else {
-                addBotMessage("Un défaut d'isolement peut causer des coupures aléatoires. C'est difficile à diagnostiquer sans appareil de mesure. Ne touchez à rien, je peux intervenir : 06 60 19 35 21.");
-            }
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'diff_q1') {
-            if (oui) {
-                addBotMessage("Le différentiel protège contre les fuites de courant. 👉 Débranchez tous vos appareils (uniquement les fiches), remontez le différentiel, puis rebranchez un par un. Lequel fait sauter le différentiel ?");
-                diagnosticContext.waitingFor = 'diff_test';
-            } else {
-                addBotMessage("Décrivez-moi plus précisément quel équipement saute et dans quelle situation.");
-                diagnosticContext.waitingFor = 'diff_detail';
-            }
-            return;
-        }
-        if (wf === 'diff_test') {
-            if (oui || m.includes('trouve')) { addBotMessage("✅ Cet appareil a une fuite de courant — il est dangereux. Ne le rebranchez plus et faites-le vérifier."); }
-            else { addBotMessage("Si le différentiel saute sans aucun appareil branché, il y a une fuite dans l'installation. Ne touchez à rien, je dois intervenir : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-        if (wf === 'diff_detail') {
-            addBotMessage("Pour ce type de problème sur le différentiel, une mesure avec un contrôleur d'isolement est nécessaire. Contactez-moi : 06 60 19 35 21.");
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'prise_q1') {
-            if (oui || m.includes('les autres') || m.includes('reste') || m.includes('fonctionne')) {
-                addBotMessage("👉 Testez la prise avec un appareil différent que vous savez fonctionnel (chargeur de téléphone, lampe). L'appareil fonctionne-t-il sur cette prise ?");
-                diagnosticContext.waitingFor = 'prise_test';
-            } else {
-                addBotMessage("Plusieurs prises hors service dans une même zone — ça vient souvent d'un disjoncteur divisionnaire abaissé. Observez votre tableau, y a-t-il un petit disjoncteur baissé ?");
-                diagnosticContext.waitingFor = 'prise_tableau';
-            }
-            return;
-        }
-        if (wf === 'prise_test') {
-            if (non || m.includes('toujours pas') || m.includes('rien')) { addBotMessage("La prise est hors service. Ne l'utilisez plus pour éviter tout risque. Je peux la remplacer facilement — contactez-moi : 06 60 19 35 21."); }
-            else { addBotMessage("✅ La prise fonctionne correctement ! C'était votre appareil qui avait un problème, pas la prise elle-même."); }
-            resetDiagnosticContext(); return;
-        }
-        if (wf === 'prise_tableau') {
-            if (oui || m.includes('abaiss') || m.includes('trouve')) {
-                addBotMessage("👉 Remontez ce disjoncteur avec son levier. Les prises fonctionnent à nouveau ?");
-                diagnosticContext.waitingFor = 'prise_retour';
-            } else {
-                addBotMessage("Tous les disjoncteurs sont en position normale mais les prises ne fonctionnent pas — problème de câblage. Je dois intervenir : 06 60 19 35 21.");
-                resetDiagnosticContext();
-            }
-            return;
-        }
-        if (wf === 'prise_retour') {
-            if (oui || m.includes('marche') || m.includes('fonctionne')) { addBotMessage("✅ Le disjoncteur s'était déclenché, probablement par une surcharge. Si ça recommence souvent, évitez de trop charger ce circuit."); }
-            else { addBotMessage("Le disjoncteur remonte mais les prises ne reprennent pas. Problème de câblage — je dois passer : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'lum_q1') {
-            if (m.includes('une') || m.includes('seule') || m.includes('unique')) {
-                addBotMessage("Avez-vous essayé de changer l'ampoule ? Ça paraît évident mais c'est souvent la cause 😄");
-                diagnosticContext.waitingFor = 'lum_ampoule';
-            } else {
-                addBotMessage("Plusieurs lumières en panne dans une zone — vérifiez votre tableau. Y a-t-il un disjoncteur abaissé ?");
-                diagnosticContext.waitingFor = 'lum_tableau';
-            }
-            return;
-        }
-        if (wf === 'lum_ampoule') {
-            if (oui || m.includes('change') || m.includes('essaye') || m.includes('deja')) {
-                addBotMessage("Si une ampoule neuve ne fonctionne pas non plus, le problème vient du luminaire ou du circuit. Je peux venir vérifier : 06 60 19 35 21.");
-                resetDiagnosticContext();
-            } else {
-                addBotMessage("👉 Coupez l'interrupteur, changez l'ampoule par une neuve (attention à l'ampoule froide uniquement, jamais à chaud), et testez. Ça fonctionne ?");
-                diagnosticContext.waitingFor = 'lum_apres';
-            }
-            return;
-        }
-        if (wf === 'lum_apres') {
-            if (oui || m.includes('marche') || m.includes('allume') || m.includes('fonctionne')) { addBotMessage("✅ C'était l'ampoule qui était grillée. Problème résolu !"); }
-            else { addBotMessage("Ampoule neuve mais toujours rien — le problème vient du luminaire ou du circuit. Contactez-moi : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-        if (wf === 'lum_tableau') {
-            if (oui || m.includes('abaiss')) {
-                addBotMessage("👉 Remontez ce disjoncteur. Les lumières reviennent ?");
-                diagnosticContext.waitingFor = 'lum_retour';
-            } else {
-                addBotMessage("Tous les disjoncteurs OK mais les lumières ne fonctionnent pas — problème sur le circuit éclairage. Je dois intervenir : 06 60 19 35 21.");
-                resetDiagnosticContext();
-            }
-            return;
-        }
-        if (wf === 'lum_retour') {
-            if (oui || m.includes('marche') || m.includes('allume')) { addBotMessage("✅ Le disjoncteur éclairage s'était déclenché. Vérifiez si vous n'avez pas trop de spots sur un même circuit."); }
-            else { addBotMessage("Disjoncteur remonté mais lumières éteintes — problème de câblage. Je dois venir : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'clig_q1') {
-            if (oui || m.includes('led')) {
-                addBotMessage("Avez-vous un variateur sur ce circuit ?");
-                diagnosticContext.waitingFor = 'clig_varia';
-            } else {
-                addBotMessage("Une ampoule classique qui clignote peut indiquer un mauvais contact. Changez d'abord l'ampoule. Si ça continue, contactez-moi.");
-                resetDiagnosticContext();
-            }
-            return;
-        }
-        if (wf === 'clig_varia') {
-            if (oui || m.includes('variateur')) { addBotMessage("👉 Vérifiez que votre ampoule LED est bien marquée 'dimmable' sur l'emballage. Si oui et que ça clignote encore, le variateur est peut-être défectueux — je peux le remplacer."); }
-            else { addBotMessage("Sans variateur, le clignotement vient d'un mauvais contact ou d'un problème de tension. Changez l'ampoule. Si ça persiste, je dois vérifier le circuit."); }
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'inter_q1') {
-            if (oui || m.includes('rien') || m.includes('ne se passe')) {
-                addBotMessage("Le circuit d'éclairage fonctionne-t-il quand même (via un autre interrupteur ou en vérifiant le disjoncteur éclairage dans le tableau) ?");
-                diagnosticContext.waitingFor = 'inter_q2';
-            } else {
-                addBotMessage("Décrivez-moi ce qui se passe exactement quand vous l'actionnez.");
-                diagnosticContext.waitingFor = 'inter_detail';
-            }
-            return;
-        }
-        if (wf === 'inter_q2') {
-            if (oui || m.includes('fonctionne') || m.includes('marche') || m.includes('autre')) { addBotMessage("L'interrupteur lui-même est défectueux — mécanisme HS. C'est un remplacement simple et rapide. Je peux passer le changer : 06 60 19 35 21."); }
-            else { addBotMessage("Tout le circuit ne répond pas. Vérifiez si un disjoncteur éclairage est abaissé dans votre tableau. Sinon, je dois intervenir."); }
-            resetDiagnosticContext(); return;
-        }
-        if (wf === 'inter_detail') {
-            addBotMessage("Pour les problèmes d'interrupteur complexes (va-et-vient, interrupteur connecté...), il vaut mieux que je vérifie directement. Contactez-moi : 06 60 19 35 21.");
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'varia_q1') {
-            if (m.includes('clignote') || m.includes('scintille')) { addBotMessage("Assurez-vous que vos ampoules sont bien marquées 'dimmable'. Si c'est le cas et que ça clignote encore, le variateur est peut-être défectueux. Je peux le remplacer : 06 60 19 35 21."); }
-            else if (m.includes('bloque') || m.includes('repond pas')) { addBotMessage("Coupez le disjoncteur, attendez 30 secondes, réenclenchez. Si ça ne règle pas le problème, le variateur doit être remplacé — contactez-moi."); }
-            else { addBotMessage("Pour les variateurs, c'est souvent une compatibilité LED ou une panne du mécanisme. Contactez-moi : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'ce_q1') {
-            if (oui || m.includes('abaiss') || m.includes('bas') || m.includes('tombe')) {
-                addBotMessage("Remontez-le. Si l'eau est à nouveau chaude dans quelques heures, c'était une surcharge. Si le disjoncteur retombe, la résistance est probablement HS — contactez-moi : 06 60 19 35 21.");
-            } else {
-                addBotMessage("Le disjoncteur est en place mais l'eau reste froide. Le thermostat ou la résistance est défectueux — je peux intervenir : 06 60 19 35 21.");
-            }
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'vmc_q1') {
-            if (m.includes('bruit') || m.includes('son') || m.includes('anormal') || m.includes('fort')) { addBotMessage("Nettoyez les bouches de ventilation accessibles et le filtre si possible. Si le bruit persiste, le moteur est usé — je peux le remplacer : 06 60 19 35 21."); }
-            else { addBotMessage("VMC qui ne tourne plus — vérifiez son disjoncteur dans le tableau. S'il est en place mais la VMC reste éteinte, le moteur est HS. Je peux intervenir : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'linky_q1') {
-            if (m.includes('rouge') || m.includes('clignote') || m.includes('erreur')) { addBotMessage("Un voyant rouge sur le Linky peut indiquer une coupure Enedis ou un problème de contrat. Appelez Enedis au 09 70 83 19 00 — c'est eux qui gèrent le compteur Linky. Si le problème est dans l'installation après le compteur, je peux intervenir."); }
-            else { addBotMessage("Le compteur Linky est géré par Enedis (09 70 83 19 00). Pour les problèmes dans votre installation après le compteur, je suis là."); }
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'ext_q1') {
-            addBotMessage("Les circuits extérieurs s'humidifient parfois. Observez si le disjoncteur dédié à l'extérieur est abaissé dans votre tableau.");
-            addBotMessage("Si le disjoncteur est OK mais rien ne fonctionne, il peut y avoir de l'humidité dans un boîtier ou un câble abîmé. Ne touchez à rien, contactez-moi : 06 60 19 35 21.");
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'ip_q1') {
-            if (m.includes('sonne pas') || m.includes('ne sonne') || m.includes('sonnerie')) { addBotMessage("Essayez de couper et recouper l'alimentation de l'interphone (prise ou disjoncteur dédié) comme un redémarrage. Si ça ne change rien, je peux vérifier."); }
-            else if (m.includes('entend pas') || m.includes('son')) { addBotMessage("Cherchez un réglage de volume sur le boîtier intérieur. Si ça ne résout pas le problème, contactez-moi : 06 60 19 35 21."); }
-            else { addBotMessage("Pour les problèmes d'interphonie complexes, il vaut mieux que je vienne vérifier les câblages. Contactez-moi : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'tab_q1') {
-            addBotMessage("Un tableau de plus de 20-25 ans n'est souvent plus aux normes NF C 15-100 : pas de différentiel 30mA, disjoncteurs vétustes, circuits insuffisants...");
-            addBotMessage("Ce n'est pas toujours urgent si tout fonctionne, mais c'est un vrai risque pour la sécurité. Je peux faire un diagnostic gratuit et vous dire exactement ce qui doit être mis à jour — contactez-moi.");
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'mp_q1') {
-            addBotMessage("Une multiprise est limitée à environ 3500W maximum. Le four seul consomme 2000-3500W, le lave-linge pareil. Ne branchez jamais deux gros appareils sur la même multiprise.");
-            addBotMessage("Répartissez sur différentes prises murales. Si vous manquez de prises dans une pièce, je peux en installer de nouvelles — contactez-moi.");
-            resetDiagnosticContext(); return;
-        }
-
-        if (wf === 'res_q1') {
-            if (m.includes('ne fonctionne') || m.includes('marche pas') || m.includes('hs') || m.includes('hors service')) { addBotMessage("Une prise RJ45 hors service peut venir d'un câble débranché au tableau de brassage ou d'une prise mal sertie. Vérifiez que votre switch ou votre box est bien allumé. Si le problème persiste, je peux intervenir."); }
-            else { addBotMessage("Je peux poser des prises réseau RJ45 et faire le câblage structuré complet. Contactez-moi pour un devis gratuit : 06 60 19 35 21."); }
-            resetDiagnosticContext(); return;
-        }
-
-        addBotMessage("Je n'ai pas bien saisi votre réponse. Pouvez-vous me dire simplement : est-ce que ça fonctionne ou non ? Ou décrivez ce que vous observez exactement.");
+    function contactDirect() {
+        addMessage("Nous sommes à votre entière disposition :");
+        setChoices([
+            { text: "📅 Demander un rappel automatique", type: "form", action: () => { openModal(); toggleChatbot(false); } },
+            { text: "✉️ Envoyer un e-mail dédié", type: "mail", action: () => { window.location.href = "mailto:startelec45@gmail.com"; } },
+            { text: "↩️ Menu principal", action: initChat }
+        ]);
     }
 
     function resetDiagnosticContext() {
